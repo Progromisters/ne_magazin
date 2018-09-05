@@ -119,4 +119,18 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
-STATIC_URL = '/static/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static', 'media')
+
+MEDIA_URL = '/media/'  # URL для медии в шаблонах
+
+
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static', 'static')  # пустая папка, сюда будет собирать статику collectstatic
+
+STATIC_URL = '/static/'  # URL для шаблонов
+
+
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static', 'assets'),
+)
