@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
   <title>Document</title>
 </head>
 <body>
@@ -31,25 +32,32 @@
     <nav class="main-nav">
       <ul class="nav-list">
         <li class="nav-list__item item-home"><a href=""><i class="fas fa-home"></i></a></li>
-        <li class="nav-list__item"><button class="button dropbtn" onclick="myFunction()">
+        <li class="nav-list__item"><button class="button dropbtn" onfocus="myFunction()">
             Shop by Category <i class="fas fa-angle-down"></i>
           </button>
-          <div class="dropdown-content show" id="myDropdown">
+          <div class="dropdown-content " id="myDropdown">
               <a href="#">Link 1</a>
               <a href="#">Link 2</a>
               <a href="#">Link 3</a>
           </div>
         </li>
-        <li class="nav-list__item">Shop by Brand <i class="fas fa-angle-down"></i></li>
+        <li class="nav-list__item">Shop by Brand <i class="fas fa-angle-down"></i>
+            <ul class = "sub-menu">
+              <li><a href="#">Пункт1</a></li>
+              <li><a href="#">Пункт2</a></li>
+              <li><a href="#">Пункт3</a></li>
+          </ul>
+        </li>
         <li class="nav-list__item"><a href="">Tranding</a></li>
         <li class="nav-list__item"><a href="">Offers</a></li>
         <li class="nav-list__item"><a href="">Contact us</a></li>
         <li class="nav-list__item item-buttons">
           <button class="button button--yellow" href=""><i class="fab fa-opencart"></i> Cart 0</button><button class="button button--blue" href="" onclick="toggle(signin)"><i class="far fa-user"></i> Sign in</button>
         </li>
-
       </ul>
     </nav>
+
+
   </header>
   <main class="page-main">
 
@@ -86,21 +94,11 @@
       function toggle(obj) {
           obj.style.visibility = (obj.style.visibility == 'hidden') ? 'visible' : 'hidden';
       };
-      function myFunction() {
-        document.getElementById("myDropdown").classList.toggle("show");
-        }
 
-        // Close the dropdown if the user clicks outside of it
-        window.onclick = function(e) {
-          if (!e.target.matches('.dropbtn')) {
-            var myDropdown = document.getElementById("myDropdown");
-              if (myDropdown.classList.contains('show')) {
-                myDropdown.classList.remove('show');
-              }
-          }
-        }
   </script>
 
 </body>
-<!-- Scripts -->
+<script src="{% static 'js/menu.js' %}"></script>
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 </html>
