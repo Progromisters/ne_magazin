@@ -1,0 +1,85 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <title>Document</title>
+</head>
+<body>
+  <header class="header page-header">
+    <div class="header-upper">
+      <h1 class="header-upper__logo">
+        <a href="">
+          <img src="{% static 'img/bag.png' %}" alt="">
+          <p>Commerece</p>
+        </a>
+      </h1>
+      <div class="header-upper__widget">
+        <div class="search-wrapper">
+          <input class="search-input" type="text" placeholder="Search">
+          <button class="search-button" value="Search"><i class="fas fa-search"></i></button>
+        </div>
+        <input class="button button--blue signup-button" type="button" value="Sign Up" onclick="toggle(signup)">
+      </div>
+    </div>
+    <nav class="main-nav">
+      <ul class="nav-list">
+        <li class="nav-list__item item-home"><a href=""><i class="fas fa-home"></i></a></li>
+        <li class="nav-list__item">Shop by Category <i class="fas fa-angle-down"></i></li>
+        <li class="nav-list__item">Shop by Brand <i class="fas fa-angle-down"></i></li>
+        <li class="nav-list__item"><a href="">Tranding</a></li>
+        <li class="nav-list__item"><a href="">Offers</a></li>
+        <li class="nav-list__item"><a href="">Contact us</a></li>
+        <li class="nav-list__item item-buttons">
+          <button class="button button--yellow" href=""><i class="fab fa-opencart"></i> Cart 0</button><button class="button button--blue" href="" onclick="toggle(signin)"><i class="far fa-user"></i> Sign in</button>
+        </li>
+
+      </ul>
+    </nav>
+  </header>
+  <main class="page-main">
+
+  </main>
+  <footer class="page-footer">
+
+  </footer>
+
+  <!-- Pop Ups -->
+  <div class="pop-up-sign sign-in" onclick="toggle(signin)">
+      <div class="pop-up-sign__content">
+      <h2 class="pop-up-sign__head">Sign In</h2>
+      <form class="pop-up-sign__form"action="">
+        <input id="e-mail" type="text" placeholder="E-mail">
+        <input id="password" type="password" placeholder="Password">
+        <input class="button button--yellow" type="submit" value="Sign In">
+      </form>
+      </div>
+  </div>
+  <div class="pop-up-sign sign-up" onclick="toggle(signup)">
+      <div class="pop-up-sign__content">
+      <h2 class="pop-up-sign__head">Sign Up</h2>
+      <form class="pop-up-sign__form"action="">
+        <input id="e-mail" type="text" placeholder="E-mail">
+        <input id="password" type="password" placeholder="Password">
+        <input class="button button--yellow"type="submit" value="Sign Up">
+      </form>
+      </div>
+  </div>
+
+  <script>
+      var signin = document.querySelector(".sign-in");
+      var signup = document.querySelector(".sign-up");
+      function toggle(obj) {
+          obj.style.visibility = (obj.style.visibility == 'hidden') ? 'visible' : 'hidden';
+      };
+  </script>
+
+</body>
+<!-- Scripts -->
+</html>

@@ -1,0 +1,250 @@
+body {
+  margin: 0;
+}
+
+.button {
+  border: 0;
+  text-decoration: 0;
+  font-size: 16px;
+  font-family: "Roboto";
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.button--blue {
+  background-color: #00a8a9;
+}
+
+.button--yellow {
+  background-color: #f0cc50;
+}
+
+.header-upper {
+  padding: 40px 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 0px;
+  margin-right: 0px;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.header-upper__logo,
+.header-upper__widget {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 0px;
+  margin-right: 0px;
+  width: calc(50% - 0px);
+}
+
+.header-upper__logo {
+  justify-content: flex-start;
+  margin: 0;
+  margin-top: auto;
+  font-size: 32px;
+  font-family: 'Roboto';
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.header-upper__logo > a {
+  display: flex;
+  align-items: flex-end;
+  margin: 0;
+  text-decoration: none;
+  color: rgba(52, 39, 44, 0.8);
+}
+
+.header-upper__logo p {
+  margin: 0;
+  padding: 0;
+  margin-left: 40px;
+}
+
+.header-upper__logo p::before {
+  content: "e";
+  font-size: 32px;
+  color: #000000;
+  font-weight: 700;
+  text-align: left;
+}
+
+.header-upper__logo a > img {
+  position: absolute;
+}
+
+.header-upper__widget {
+  position: relative;
+  justify-content: flex-end;
+  display: flex;
+  align-items: center;
+}
+
+.search-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.search-input {
+  width: 273px;
+  height: 40px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #bebebe;
+  font-size: 16px;
+  font-family: "Roboto";
+  color: rgba(0, 0, 0, 0.5);
+  padding-left: 15px;
+}
+
+.search-button {
+  position: absolute;
+  right: 5px;
+  background: none;
+  border: none;
+  font-size: 26px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.signup-button {
+  width: 133px;
+  height: 44px;
+}
+
+.main-nav {
+  background-color: #37393e;
+}
+
+.nav-list {
+  padding: 0;
+  margin: 0;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding-left: 100px;
+  padding-right: 100px;
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-list__item {
+  margin: 10px 0;
+  font-size: 16px;
+  font-family: "Roboto";
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.nav-list__item > a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.item-home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: #00a8a9;
+  font-size: 22px;
+  color: #ffffff;
+  border-radius: 50%;
+}
+
+.item-buttons {
+  display: flex;
+  align-self: stretch;
+  margin: 0;
+}
+
+.item-buttons > button {
+  height: 100%;
+  display: inline-block;
+  padding: 0 10px;
+  font-size: 36px;
+}
+
+.pop-up-sign {
+  position: absolute;
+  top: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.pop-up-sign__content {
+  position: fixed;
+  overflow: hidden;
+  width: 400px;
+  height: 300px;
+  border: 5px solid #37393e;
+  background-color: #ffffff;
+}
+
+.pop-up-sign__head {
+  margin: 0;
+  padding: 20px 0;
+  background-color: #00a8a9;
+  font-size: 32px;
+  font-family: "Roboto";
+  text-align: center;
+  color: #ffffff;
+}
+
+.pop-up-sign__form {
+  margin: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pop-up-sign input[type="text"],
+.pop-up-sign input[type="password"] {
+  box-sizing: border-box;
+  margin: -1px;
+  font-size: 16px;
+  font-family: "Roboto";
+  color: rgba(0, 0, 0, 0.5);
+  padding-left: 15px;
+}
+
+.pop-up-sign input[type="submit"] {
+  margin-top: 1px;
+  box-sizing: border-box;
+}
+
+.pop-up-sign input {
+  width: 300px;
+  height: 50px;
+}
+
+.sign-up {
+  visibility: hidden;
+}
+
+.sign-in {
+  visibility: hidden;
+}
+
+@media screen and (max-width: 780px) {
+  .header-upper {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .nav-list {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
