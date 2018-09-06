@@ -31,7 +31,15 @@
     <nav class="main-nav">
       <ul class="nav-list">
         <li class="nav-list__item item-home"><a href=""><i class="fas fa-home"></i></a></li>
-        <li class="nav-list__item">Shop by Category <i class="fas fa-angle-down"></i></li>
+        <li class="nav-list__item"><button class="button dropbtn" onclick="myFunction()">
+            Shop by Category <i class="fas fa-angle-down"></i>
+          </button>
+          <div class="dropdown-content show" id="myDropdown">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+          </div>
+        </li>
         <li class="nav-list__item">Shop by Brand <i class="fas fa-angle-down"></i></li>
         <li class="nav-list__item"><a href="">Tranding</a></li>
         <li class="nav-list__item"><a href="">Offers</a></li>
@@ -78,6 +86,19 @@
       function toggle(obj) {
           obj.style.visibility = (obj.style.visibility == 'hidden') ? 'visible' : 'hidden';
       };
+      function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(e) {
+          if (!e.target.matches('.dropbtn')) {
+            var myDropdown = document.getElementById("myDropdown");
+              if (myDropdown.classList.contains('show')) {
+                myDropdown.classList.remove('show');
+              }
+          }
+        }
   </script>
 
 </body>
