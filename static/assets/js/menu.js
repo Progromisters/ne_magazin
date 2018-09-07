@@ -1,4 +1,4 @@
-var el = document.getElementsByClassName("nav-list__item")
+var el = document.getElementsByClassName("dropdown")
 for(var i=0; i<el.length; i++) {
    el[i].addEventListener("mouseenter", showSub, false);
    el[i].addEventListener("mouseleave", hideSub, false);
