@@ -1,8 +1,16 @@
-from django.shortcuts import render
-from .forms import BuyerForm
+from django.shortcuts import render, redirect
+from .forms import RegistrationForm
+
 
 def home(request):
-    form = BuyerForm(request.POST or None)
-    if request.POST and form.is_valid():
-        new_form = form.save()
-    return render(request, 'main/index.html', locals())
+    if request.method == 'POST':
+        form = RegistrationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('/')
+        else:
+            return render(request, 'main/base.html', locals())
+    else:
+        form = RegistrationForm()
+        return render(request, 'main/base.html', locals())
+
