@@ -537,14 +537,27 @@ body {
     padding-left: 10px;
     padding-right: 10px;
   }
-
-  .welcome {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-
-  .features {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
 }
+
+.nav-list__item-menu{
+    /*list-style-type: none;*/
+  list-style: decimal;
+  height:0;
+  overflow: hidden;
+  position: absolute;
+  opacity: 0;
+  transition: all 0.5s ease-in;
+  top: 20px;
+  background-color: #37393e;
+  box-shadow: 0px 8px 16px rgba(0,0,0, 0.2);
+  min-width:100px;
+  /*min-height:100px;*/
+  z-index: 1;
+  color: #ffffff;
+}
+
+.nav-list__item-menu a{
+  text-decoration: none;
+  color: #ffffff;
+}
+
