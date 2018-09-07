@@ -9,8 +9,8 @@ def home(request):
             form.save()
             return redirect('/')
         else:
-            return render(request, 'main/base.html', locals())
+            return render(request, 'main/index.html', locals())
     else:
         form = RegistrationForm()
-        return render(request, 'main/base.html', locals())
+        return render(request, 'main/index.html', locals())
 
