@@ -54,7 +54,7 @@
   <div class="pop-up-sign sign-in" onclick="toggle(signin)">
       <div class="pop-up-sign__content">
       <h2 class="pop-up-sign__head">Sign In</h2>
-      <form class="pop-up-sign__form"action="">
+      <form class="pop-up-sign__form"action="">{%  csrf_token %}
         <input id="e-mail" type="text" placeholder="E-mail">
         <input id="password" type="password" placeholder="Password">
         <input class="button button--yellow" type="submit" value="Sign In">
@@ -64,7 +64,7 @@
   <div class="pop-up-sign sign-up" onclick="toggle(signup)">
       <div class="pop-up-sign__content">
       <h2 class="pop-up-sign__head">Sign Up</h2>
-      <form class="pop-up-sign__form"action="">
+      <form class="pop-up-sign__form"action="">{%  csrf_token %}
         <input id="e-mail" type="text" placeholder="E-mail">
         <input id="password" type="password" placeholder="Password">
         <input class="button button--yellow"type="submit" value="Sign Up">
