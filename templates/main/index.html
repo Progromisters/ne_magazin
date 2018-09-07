@@ -33,17 +33,17 @@
       <ul class="nav-list">
         <li class="nav-list__item item-home"><a href=""><i class="fas fa-home"></i></a></li>
         <li class="nav-list__item dropdown">Shop by Category <i class="fas fa-angle-down"></i>
-          <ul class = "nav-list__item-menu">
-              <li><a href="#">Пункт1</a></li>
-              <li><a href="#">Пункт2</a></li>
-              <li><a href="#">Пункт3</a></li>
+          <ul class="dropdown__menu">
+              <li class="dropdown__item"><a href="#">Пункт1</a></li>
+              <li class="dropdown__item"><a href="#">Пункт2</a></li>
+              <li class="dropdown__item"><a href="#">Пункт3</a></li>
           </ul>
-          </li>
+        </li>
         <li class="nav-list__item dropdown">Shop by Brand <i class="fas fa-angle-down"></i>
-            <ul class = "nav-list__item-menu">
-              <li><a href="#">Пункт1</a></li>
-              <li><a href="#">Пункт2</a></li>
-              <li><a href="#">Пункт3</a></li>
+            <ul class = "dropdown__menu">
+              <li class="dropdown__item"><a href="#">Пункт1</a></li>
+              <li class="dropdown__item"><a href="#">Пункт2</a></li>
+              <li class="dropdown__item"><a href="#">Пункт3</a></li>
           </ul>
         </li>
         <li class="nav-list__item"><a href="">Tranding</a></li>
@@ -61,11 +61,11 @@
 
   </header>
   <main class="page-main">
-    <section class="welcome">
-      <article class="welcome__content">
-        <h2 class="welcome__title">Welcome!</h2>
-        <h3 class="welcome__subtitle">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel inventore dolorem a.</h3>
-        <p class="welcome__text">
+    <section class="section welcome">
+      <article class="section__content welcome__content">
+        <h2 class="section__title">Welcome!</h2>
+        <h3 class="section__subtitle">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel inventore dolorem a.</h3>
+        <p class="section__text">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci excepturi accusamus aspernatur? Rerum laborum possimus quam et voluptates voluptate accusantium porro eaque ad optio sit odio facere molestias iusto, a mollitia! Nobis amet numquam magnam sapiente dicta natus similique consectetur ex, voluptate dolore reprehenderit iusto temporibus excepturi autem ab quasi.
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci excepturi accusamus aspernatur? Rerum laborum possimus quam et voluptates voluptate accusantium porro eaque ad optio sit odio facere molestias iusto, a mollitia! Nobis amet numquam magnam sapiente dicta natus similique consectetur ex, voluptate dolore reprehenderit iusto temporibus excepturi autem ab quasi.
         </p>
@@ -122,6 +122,57 @@
           <i class="fas fa-ellipsis-h features-item__icon features-item__icon--navy"></i>
         </li>
       </ul>
+    </section>
+    </section>
+    <section class="section products">
+      <article class="section__content products__content">
+        <h2 class="section__title">Products</h2>
+        <h3 class="section__subtitle">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel inventore dolorem a.</h3>
+        <ul class="product-list">
+          <li class="product-list__item product">
+            <div class="product__img"><img src="{% static 'img/hd.png' %}" alt=""></div>
+            <article class="section product__content">
+              <h3 class="section__title product__title">Hard Disk</h3>
+              <p class="section__subtitle product__subtitle">Lorem ipsum dolor sit amet.</p>
+            </article>
+          </li>
+          <li class="product-list__item product">
+            <div class="product__img"><img src="{% static 'img/game.png' %}" alt=""></div>
+            <article class="section product__content">
+              <h3 class="section__title product__title">Game remote</h3>
+              <p class="section__subtitle product__subtitle">Lorem ipsum dolor sit amet.</p>
+            </article>
+          </li>
+          <li class="product-list__item product">
+            <div class="product__img"><img src="{% static 'img/disk.png' %}" alt=""></div>
+            <article class="section product__content">
+              <h3 class="section__title product__title">CD / DVD</h3>
+              <p class="section__subtitle product__subtitle">Lorem ipsum dolor sit amet.</p>
+            </article>
+          </li>
+          <li class="product-list__item product">
+            <div class="product__img"><img src="{% static 'img/laptop.png' %}" alt=""></div>
+            <article class="section product__content">
+              <h3 class="section__title product__title">Laptop</h3>
+              <p class="section__subtitle product__subtitle">Lorem ipsum dolor sit amet.</p>
+            </article>
+          </li>
+          <li class="product-list__item product">
+            <div class="product__img"><img src="{% static 'img/book.png' %}" alt=""></div>
+            <article class="section product__content">
+              <h3 class="section__title product__title">Books</h3>
+              <p class="section__subtitle product__subtitle">Lorem ipsum dolor sit amet.</p>
+            </article>
+          </li>
+          <li class="product-list__item product">
+            <div class="product__img"><img src="{% static 'img/camera.png' %}" alt=""></div>
+            <article class="section product__content">
+              <h3 class="section__title product__title">Camera</h3>
+              <p class="section__subtitle product__subtitle">Lorem ipsum dolor sit amet.</p>
+            </article>
+          </li>
+        </ul>
+      </article>
     </section>
   </main>
   <footer class="page-footer">
