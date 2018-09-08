@@ -26,7 +26,7 @@
           <input class="search-input" type="text" placeholder="Search">
           <button class="search-button" value="Search"><i class="fas fa-search"></i></button>
         </div>
-        <input class="button button--blue signup-button" type="button" value="Sign Up" onclick="toggle(signup)">
+        <input class="button button--blue signup-button" type="button" value="Sign Up" onclick="togglePopUp(signup)">
       </div>
     </div>
     <nav class="main-nav">
@@ -53,7 +53,7 @@
 
         </li>
         <li class="nav-list__item item-buttons">
-          <button class="button button--yellow" href=""><i class="fab fa-opencart"></i> Cart 0</button><button class="button button--blue" href="" onclick="toggle(signin)"><i class="far fa-user"></i> Sign in</button>
+          <button class="button button--yellow" href=""><i class="fab fa-opencart"></i> Cart 0</button><button class="button button--blue" href="" onclick="togglePopUp(signin)"><i class="far fa-user"></i> Sign in</button>
         </li>
       </ul>
     </nav>
@@ -180,36 +180,28 @@
   </footer>
 
   <!-- Pop Ups -->
-  <div class="pop-up-sign sign-in" onclick="toggle(signin)">
+   <div class="pop-up-sign sign-in pop-up-sign--hidden">
       <div class="pop-up-sign__content">
       <h2 class="pop-up-sign__head">Sign In</h2>
-      <form class="pop-up-sign__form"action="">{%  csrf_token %}
+      <form class="pop-up-sign__form" action="">
         <input id="e-mail" type="text" placeholder="E-mail">
         <input id="password" type="password" placeholder="Password">
         <input class="button button--yellow" type="submit" value="Sign In">
       </form>
+      <div class="pop-up-sign__close" onclick="togglePopUp(signin)"></div>
       </div>
   </div>
-  <div class="pop-up-sign sign-up" onclick="toggle(signup)">
+  <div class="pop-up-sign sign-up pop-up-sign--hidden">
       <div class="pop-up-sign__content">
       <h2 class="pop-up-sign__head">Sign Up</h2>
-      <form class="pop-up-sign__form"action="">{%  csrf_token %}
+      <form class="pop-up-sign__form" action="">
         <input id="e-mail" type="text" placeholder="E-mail">
         <input id="password" type="password" placeholder="Password">
         <input class="button button--yellow"type="submit" value="Sign Up">
       </form>
+      <div class="pop-up-sign__close" onclick="togglePopUp(signup)"></div>
       </div>
   </div>
-
-  <script>
-      var signin = document.querySelector(".sign-in");
-      var signup = document.querySelector(".sign-up");
-      function toggle(obj) {
-          obj.style.visibility = (obj.style.visibility == 'hidden') ? 'visible' : 'hidden';
-      };
-
-  </script>
-
 </body>
 <script src="{% static 'js/menu.js' %}"></script>
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>

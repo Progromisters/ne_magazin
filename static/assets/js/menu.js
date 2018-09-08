@@ -1,3 +1,4 @@
+//Menu
 var el = document.getElementsByClassName("dropdown")
 for(var i=0; i<el.length; i++) {
    el[i].addEventListener("mouseenter", showSub, false);
@@ -24,3 +25,9 @@ function hideSub() {
     }
 }
 
+//PopUps
+var signin = document.querySelector(".sign-in");
+var signup = document.querySelector(".sign-up");
+function togglePopUp(obj) {
+  obj.classList.toggle('pop-up-sign--hidden');
+};

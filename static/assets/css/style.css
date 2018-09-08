@@ -175,13 +175,16 @@ body {
 .item-home a {
   display: flex;
   justify-content: center;
-  align-items: center;
   width: 50px;
   height: 50px;
   background-color: #00a8a9;
   font-size: 22px;
   color: #ffffff;
   border-radius: 50%;
+}
+
+.item-home i {
+  margin: 0;
 }
 
 .item-buttons {
@@ -198,19 +201,19 @@ body {
 }
 
 .pop-up-sign {
-  position: absolute;
+  position: fixed;
   top: 0px;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.6);
+  background-size: cover;
 }
 
 .pop-up-sign__content {
   position: fixed;
-  overflow: hidden;
   width: 400px;
   height: 300px;
   border: 5px solid #37393e;
@@ -235,6 +238,30 @@ body {
   align-items: center;
 }
 
+.pop-up-sign__close {
+  position: absolute;
+  top: -30px;
+  right: -20px;
+  width: 5px;
+  height: 20px;
+  background: #ffffff;
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+
+.pop-up-sign__close::after {
+  display: inline-block;
+  content: "";
+  width: 5px;
+  height: 20px;
+  background: #ffffff;
+  transform: rotate(90deg);
+}
+
+.pop-up-sign--hidden {
+  visibility: hidden;
+}
+
 .pop-up-sign input[type="text"],
 .pop-up-sign input[type="password"] {
   box-sizing: border-box;
@@ -253,14 +280,6 @@ body {
 .pop-up-sign input {
   width: 300px;
   height: 50px;
-}
-
-.sign-up {
-  visibility: hidden;
-}
-
-.sign-in {
-  visibility: hidden;
 }
 
 .page-up {
@@ -296,10 +315,6 @@ body {
 
 .page-main {
   height: 1000px;
-}
-
-.show {
-  display: block;
 }
 
 .dropdown__menu {
