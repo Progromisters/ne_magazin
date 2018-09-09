@@ -314,10 +314,6 @@ body {
   font-weight: 300;
 }
 
-.page-main {
-  height: 1000px;
-}
-
 .dropdown__menu {
   padding: 0;
   overflow: hidden;
@@ -358,10 +354,15 @@ body {
 }
 
 .section__content {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding-left: 100px;
+  padding-right: 100px;
   width: 100%;
 }
 
 .section__title {
+  width: 100%;
   margin: 0;
   margin-bottom: 30px;
   display: flex;
@@ -560,6 +561,10 @@ body {
 
 .product-list {
   padding: 0;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding-left: 100px;
+  padding-right: 100px;
   margin-right: -150px;
   display: flex;
   justify-content: space-between;
@@ -744,6 +749,68 @@ body {
   color: #ffffff;
 }
 
+.advantage__title {
+  text-transform: uppercase;
+  margin-bottom: 50px;
+}
+
+.advantage__title::after {
+  display: none;
+}
+
+.advantage-list {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding-left: 100px;
+  padding-right: 100px;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  margin-right: -15px;
+  margin-bottom: -60px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.advantage-list__item {
+  width: 550px;
+  display: flex;
+  justify-content: center;
+  margin-right: 15px;
+  margin-bottom: 60px;
+}
+
+.advantage-list__img {
+  width: 540px;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #00a8a9;
+  font-size: 100px;
+  color: #00a8a9;
+}
+
+.advantage-list__content {
+  margin-left: 20px;
+  text-align: start;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+.advantage-list__title {
+  margin: 0;
+  padding: 0;
+  font-size: 28px;
+  color: #37393e;
+  text-transform: uppercase;
+}
+
+.advantage-list__text {
+  font-size: 16px;
+  color: #8c8c8c;
+  font-weight: 300;
+}
+
 @media screen and (max-width: 1440px) {
   .product-list {
     margin-right: -25px;
@@ -770,12 +837,27 @@ body {
     padding-right: 10px;
   }
 
+  .section__content {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
   .features {
     padding-left: 10px;
     padding-right: 10px;
   }
 
+  .product-list {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
   .counters-list {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .advantage-list {
     padding-left: 10px;
     padding-right: 10px;
   }
