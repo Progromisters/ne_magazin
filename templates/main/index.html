@@ -1,65 +1,7 @@
+{% extends 'base.html' %}
 {% load static %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-  <link rel="stylesheet" href="{% static 'css/style.css' %}">
-
-  <title>Document</title>
-</head>
-<body>
-  <header class="header page-header">
-    <div class="header-upper">
-      <h1 class="header-upper__logo">
-        <a href="">
-          <img src="{% static 'img/bag.png' %}" alt="">
-          <p>Commerece</p>
-        </a>
-      </h1>
-      <div class="header-upper__widget">
-        <div class="search-wrapper">
-          <input class="search-input" type="text" placeholder="Search">
-          <button class="search-button" value="Search"><i class="fas fa-search"></i></button>
-        </div>
-        <input class="button button--blue signup-button" type="button" value="Sign Up" onclick="togglePopUp(signup)">
-      </div>
-    </div>
-    <nav class="main-nav">
-      <ul class="nav-list">
-        <li class="nav-list__item item-home"><a href=""><i class="fas fa-home"></i></a></li>
-        <li class="nav-list__item dropdown">Shop by Category <i class="fas fa-angle-down"></i>
-          <ul class="dropdown__menu">
-              <li class="dropdown__item"><a href="#">Пункт1</a></li>
-              <li class="dropdown__item"><a href="#">Пункт2</a></li>
-              <li class="dropdown__item"><a href="#">Пункт3</a></li>
-          </ul>
-        </li>
-        <li class="nav-list__item dropdown">Shop by Brand <i class="fas fa-angle-down"></i>
-            <ul class = "dropdown__menu">
-              <li class="dropdown__item"><a href="#">Пункт1</a></li>
-              <li class="dropdown__item"><a href="#">Пункт2</a></li>
-              <li class="dropdown__item"><a href="#">Пункт3</a></li>
-          </ul>
-        </li>
-        <li class="nav-list__item"><a href="">Tranding</a></li>
-        <li class="nav-list__item"><a href="">Offers</a></li>
-        <li class="nav-list__item"><a href="">Contact us</a></li>
-        <li class="nav-list__item"><a href="">Разработчики</a>
-
-        </li>
-        <li class="nav-list__item item-buttons">
-          <button class="button button--yellow" href=""><i class="fab fa-opencart"></i> Cart 0</button><button class="button button--blue" href="" onclick="togglePopUp(signin)"><i class="far fa-user"></i> Sign in</button>
-        </li>
-      </ul>
-    </nav>
-
-
-  </header>
+{% block content %}
   <main class="page-main">
     <section class="section welcome">
       <article class="section__content welcome__content">
@@ -211,9 +153,6 @@
       </article>
     </section>
   </main>
-  <footer class="page-footer">
-
-  </footer>
 
   <!-- Pop Ups -->
    <div class="pop-up-sign sign-in pop-up-sign--hidden">
@@ -238,8 +177,4 @@
       <div class="pop-up-sign__close" onclick="togglePopUp(signup)"></div>
       </div>
   </div>
-</body>
-<script src="{% static 'js/menu.js' %}"></script>
-<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-</html>
+{% endblock %}
