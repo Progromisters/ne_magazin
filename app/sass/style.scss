@@ -301,12 +301,10 @@ body{
   padding: 0;
   overflow: hidden;
   position: absolute;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   list-style-type: none;
   opacity: 0;
   bottom: -117px;
+  left: -10px;
   transition: all 0.5s ease-in;
   background-color: #37393e;
   min-width: 200px;
@@ -315,7 +313,9 @@ body{
   }
   &__item{
     padding: 10px 0;
+    padding-left: 10px;
   }
+
 }
 
 .dropdown__menu a{
