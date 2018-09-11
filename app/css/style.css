@@ -121,13 +121,14 @@ body {
   background-color: #37393e;
 }
 
-.gradient {  
+.gradient { 
+  padding-top: 20px; 
   background: linear-gradient(to right, #d38312, #a83279);
   max-width: 1600px;
   margin: 0 auto;
  }
- .slickimg{   
-  max-height: 410px; 
+ .slickimg{  
+  max-height: 420px; 
   padding: 0 200px; 
  }
 .slick-arrow__slick-prev{
