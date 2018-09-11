@@ -12,19 +12,19 @@
 <body>
   <header class="header page-header" name="top">
     <div class="header-upper">
-      <h1 class="header-upper__logo">
-        <a href="">
-          <img src="img/bag.png" alt="">
-          <p>Commerece </p>
-        </a>
-      </h1>
-      <div class="header-upper__widget">
-        <div class="search-wrapper">
-          <input class="search-input" type="text" placeholder="Search">
-          <button class="search-button" value="Search"><i class="fas fa-search"></i></button>
+        <h1 class="header-upper__logo">
+          <a href="">
+            <img src="img/bag.png" alt="">
+            <p>Commerece </p>
+          </a>
+        </h1>
+        <div class="header-upper__widget">
+          <div class="search-wrapper">
+            <input class="search-input" type="text" placeholder="Search">
+            <button class="search-button" value="Search"><i class="fas fa-search"></i></button>
+          </div>
+          <input class="button button--blue signup-button" type="button" value="Sign Up" onclick="togglePopUp(signup)">
         </div>
-        <input class="button button--blue signup-button" type="button" value="Sign Up" onclick="togglePopUp(signup)">
-      </div>
     </div>
     <nav class="main-nav">
       <ul class="nav-list">
@@ -46,8 +46,6 @@
         <li class="nav-list__item"><a href="">Tranding</a></li>
         <li class="nav-list__item"><a href="">Offers</a></li>
         <li class="nav-list__item"><a href="">Contact us</a></li>
-        <li class="nav-list__item"><a href="">Разработчики</a>
-
         </li>
         <li class="nav-list__item item-buttons">
           <button class="button button--yellow" href=""><i class="fab fa-opencart"></i> Cart 0</button><button class="button button--blue" href="" onclick="togglePopUp(signin)"><i class="far fa-user"></i> Sign in</button>
@@ -260,6 +258,64 @@
             </div>
           </li>
       </ul>
+      <div class="list-wrapper">
+          <ul class="advantage__list other-advantage-list">
+            <li class="other-advantage-list__item">
+              <div class="other-advantage-list__head">
+                <div class="other-advantage-list__img fas fa-calculator"></div>
+                <h3 class="other-advantage-list__title">
+                  Delivery
+                  <span>costs</span>
+                <h2 class="other-advantage-list__subtitle"></h2>
+              </div>
+              <div class="other-advantage-list__content">
+                <p class="other-advantage-list__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam delectus molestiae a unde ipsam nam qui, quidem reiciendis hic blanditiis.</p>
+                <p class="other-advantage-list__more fas fa-angle-double-right"></p>
+              </div>
+            </li>
+            <li class="other-advantage-list__item other-advantage-list__item--yellow">
+              <div class="other-advantage-list__head">
+                <div class="other-advantage-list__img other-advantage-list__img--red far fa-clock"></div>
+                <h3 class="other-advantage-list__title other-advantage-list__title--gray">
+                  Terms
+                  <span>of delivery</span>
+                </h3>
+              </div>
+              <div class="other-advantage-list__content">
+                <p class="other-advantage-list__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam delectus molestiae a unde ipsam nam qui, quidem reiciendis hic blanditiis.</p>
+                <p class="other-advantage-list__more other-advantage-list__more--red fas fa-angle-double-right"></p>
+              </div>
+            </li>
+            <li class="other-advantage-list__item">
+              <div class="other-advantage-list__head">
+                <div class="other-advantage-list__img fas fa-paper-plane"></div>
+                <h3 class="other-advantage-list__title">
+                  Nearest
+                  <span>branch</span>
+                </h3>
+                <h2 class="other-advantage-list__subtitle"></h2>
+              </div>
+              <div class="other-advantage-list__content">
+                <p class="other-advantage-list__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam delectus molestiae a unde ipsam nam qui, quidem reiciendis hic blanditiis.</p>
+                <p class="other-advantage-list__more fas fa-angle-double-right"></p>
+              </div>
+            </li>
+            <li class="other-advantage-list__item other-advantage-list__item--gray">
+              <div class="other-advantage-list__head">
+                <div class="other-advantage-list__img fas fa-phone"></div>
+                <h3 class="other-advantage-list__title">
+                  Calling
+                  <span>courier</span>
+                </h3>
+                <h2 class="other-advantage-list__subtitle"></h2>
+              </div>
+              <div class="other-advantage-list__content">
+                <p class="other-advantage-list__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam delectus molestiae a unde ipsam nam qui, quidem reiciendis hic blanditiis.</p>
+                <p class="other-advantage-list__more fas fa-angle-double-right"></p>
+              </div>
+            </li>  
+          </ul>
+        </div>
       </article>
     </section>
   </main>

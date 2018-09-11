@@ -24,7 +24,7 @@ body{
 
 
 .header-upper{
-  padding: 40px 100px;
+  padding: 40px 0; 
   @include row-flex();
   @include wrapper();
 }
@@ -332,7 +332,6 @@ body{
   text-align: center;
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   &__content{
-    @include wrapper();
     width: 100%;
   }
   &__title{
@@ -372,10 +371,9 @@ body{
 }
 
 .features{
-  @include wrapper();
-  padding: 0 20px;
+  margin: 0 auto;
+  max-width: 1600px;
 }
-
 .features-list{
   margin: 0;
   margin-right: -15px;
@@ -508,15 +506,14 @@ body{
 
 .product-list{
   padding: 0;
-  @include lg(margin-right, -25px);
-  @include wrapper();
+  @include lg(margin-right, -40px);
   margin-right: -150px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   list-style: none;
   &__item{
-    @include lg(margin-right, 25px);
+    @include lg(margin-right, 40px);
     width: 300px;
     padding: 0;
     margin-right: 150px; 
@@ -631,7 +628,6 @@ body{
 .counters-list{
   margin: 0;
   padding: 0;
-  @include wrapper();
   margin-top: 40px;
   display: flex;
   justify-content: space-between;
@@ -677,6 +673,10 @@ body{
 }
 
 .advantage{
+  max-width: 1600px;
+  margin: 0 auto;
+  padding-left: 0;
+  padding-right: 0;
   &__title{
     text-transform: uppercase;
     margin-bottom: 50px;
@@ -687,7 +687,7 @@ body{
 }
 
 .advantage-list{
-  @include wrapper();
+  @include wrapper;
   list-style: none;
   display: flex;
   justify-content: space-between;
@@ -713,6 +713,9 @@ body{
     color: #00a8a9;
   }
   &__content{
+    margin: 0 auto;
+    padding-left: 0;
+    padding-right: 0;
     margin-left: 20px;
     text-align: start;
     font-family: "Roboto", Arial, Helvetica, sans-serif;
@@ -731,3 +734,67 @@ body{
   }
 }
 
+.list-wrapper{
+  width: 100%;
+  margin-top: 40px;
+  background-color: #f14d4d;
+}
+
+.other-advantage-list{
+  padding: 0;
+  margin: 0;
+  @include row-flex();
+  @include wrapper();
+  list-style: none;
+  color: #ffffff;
+  &__item{
+    @include col();
+    @include size(1);
+    padding: 20px;
+    &--yellow{
+      background-color: #f0cc50;
+    }
+    &--gray{
+      background-color: #37393e;
+    }
+  }
+  &__title{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    text-transform: uppercase;
+    font-size: 36px;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    &>span{
+      font-size: 28px;
+      font-weight: 300;      
+    }
+    &--gray{
+      color: #37393e;
+    }
+  }
+  &__img{
+    float: left;
+    font-size: 80px;
+    padding-right: 20px;
+    &--red{
+      color: #f14d4d;
+    }
+  }
+  &__text{
+    padding: 40px 0;
+    text-align: start;
+    font-size: 16px;
+  }
+  &__more{
+    margin: 0;
+    float: left;
+    font-size: 40px;
+    &--red{
+      color: #f14d4d;
+    }
+  }
+}

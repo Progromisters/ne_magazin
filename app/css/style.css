@@ -21,12 +21,12 @@ body {
 }
 
 .header-upper {
-  padding: 40px 100px;
+  padding: 40px 0;
   display: flex;
   flex-wrap: wrap;
   margin-left: 0px;
   margin-right: 0px;
-  max-width: 1600px;
+  max-width: 1400px;
   margin: 0 auto;
   padding-left: 100px;
   padding-right: 100px;
@@ -124,7 +124,7 @@ body {
 .nav-list {
   padding: 0;
   margin: 0;
-  max-width: 1600px;
+  max-width: 1400px;
   margin: 0 auto;
   padding-left: 100px;
   padding-right: 100px;
@@ -341,7 +341,7 @@ body {
 
 .section {
   padding: 75px 0;
-  max-width: 1600px;
+  max-width: 1400px;
   margin: 0 auto;
   padding-left: 100px;
   padding-right: 100px;
@@ -353,10 +353,6 @@ body {
 }
 
 .section__content {
-  max-width: 1600px;
-  margin: 0 auto;
-  padding-left: 100px;
-  padding-right: 100px;
   width: 100%;
 }
 
@@ -399,11 +395,8 @@ body {
 }
 
 .features {
-  max-width: 1600px;
   margin: 0 auto;
-  padding-left: 100px;
-  padding-right: 100px;
-  padding: 0 20px;
+  max-width: 1600px;
 }
 
 .features-list {
@@ -560,10 +553,6 @@ body {
 
 .product-list {
   padding: 0;
-  max-width: 1600px;
-  margin: 0 auto;
-  padding-left: 100px;
-  padding-right: 100px;
   margin-right: -150px;
   display: flex;
   justify-content: space-between;
@@ -696,10 +685,6 @@ body {
 .counters-list {
   margin: 0;
   padding: 0;
-  max-width: 1600px;
-  margin: 0 auto;
-  padding-left: 100px;
-  padding-right: 100px;
   margin-top: 40px;
   display: flex;
   justify-content: space-between;
@@ -748,6 +733,13 @@ body {
   color: #ffffff;
 }
 
+.advantage {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding-left: 0;
+  padding-right: 0;
+}
+
 .advantage__title {
   text-transform: uppercase;
   margin-bottom: 50px;
@@ -758,7 +750,7 @@ body {
 }
 
 .advantage-list {
-  max-width: 1600px;
+  max-width: 1400px;
   margin: 0 auto;
   padding-left: 100px;
   padding-right: 100px;
@@ -791,6 +783,9 @@ body {
 }
 
 .advantage-list__content {
+  margin: 0 auto;
+  padding-left: 0;
+  padding-right: 0;
   margin-left: 20px;
   text-align: start;
   font-family: "Roboto", Arial, Helvetica, sans-serif;
@@ -810,13 +805,123 @@ body {
   font-weight: 300;
 }
 
-@media screen and (max-width: 1440px) {
+.list-wrapper {
+  width: 100%;
+  margin-top: 40px;
+  background-color: #f14d4d;
+}
+
+.other-advantage-list {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 0px;
+  margin-right: 0px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-left: 100px;
+  padding-right: 100px;
+  list-style: none;
+  color: #ffffff;
+}
+
+.other-advantage-list__item {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 0px;
+  margin-right: 0px;
+  width: calc(25% - 0px);
+  padding: 20px;
+}
+
+.other-advantage-list__item--yellow {
+  background-color: #f0cc50;
+}
+
+.other-advantage-list__item--gray {
+  background-color: #37393e;
+}
+
+.other-advantage-list__title {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-transform: uppercase;
+  font-size: 36px;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+}
+
+.other-advantage-list__title > span {
+  font-size: 28px;
+  font-weight: 300;
+}
+
+.other-advantage-list__title--gray {
+  color: #37393e;
+}
+
+.other-advantage-list__img {
+  float: left;
+  font-size: 80px;
+  padding-right: 20px;
+}
+
+.other-advantage-list__img--red {
+  color: #f14d4d;
+}
+
+.other-advantage-list__text {
+  padding: 40px 0;
+  text-align: start;
+  font-size: 16px;
+}
+
+.other-advantage-list__more {
+  margin: 0;
+  float: left;
+  font-size: 40px;
+}
+
+.other-advantage-list__more--red {
+  color: #f14d4d;
+}
+
+@media screen and (max-width: 1400px) {
+  .header-upper {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .nav-list {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .section {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
   .product-list {
-    margin-right: -25px;
+    margin-right: -40px;
   }
 
   .product-list__item {
-    margin-right: 25px;
+    margin-right: 40px;
+  }
+
+  .advantage-list {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .other-advantage-list {
+    padding-left: 50px;
+    padding-right: 50px;
   }
 }
 
@@ -836,27 +941,12 @@ body {
     padding-right: 10px;
   }
 
-  .section__content {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-
-  .features {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-
-  .product-list {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-
-  .counters-list {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-
   .advantage-list {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .other-advantage-list {
     padding-left: 10px;
     padding-right: 10px;
   }
