@@ -130,13 +130,11 @@ body{
   left:0;
   position: absolute;
   top: 50%;
-  display: flex;
-  align-items: center;
+  transform: translate(0%,-50%);
   z-index: 1;
   border: 0;
   background: none;
   font-size: 40px;
-  border-radius: 50%;
   color: rgba(55, 57, 62, 0.2);
   outline: none;
 }
@@ -145,8 +143,7 @@ body{
   right:0;
   position: absolute;
   top: 50%;
-  display: flex;
-  align-items: center;
+  transform: translate(0%,-50%);
   z-index: 1;
   border: 0;
   background: none; 
