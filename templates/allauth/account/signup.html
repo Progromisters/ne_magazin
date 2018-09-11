@@ -1,9 +1,11 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 {% load static %}
 {% load i18n %}
 
+{% block head_title %}{% trans "Signup" %}{% endblock %}
+
 {% block content %}
-  <main class="page-main">
+    <main class="page-main">
     <section class="section welcome">
       <article class="section__content welcome__content">
         <h2 class="section__title">Welcome!</h2>
@@ -212,8 +214,8 @@
     </section>
   </main>
 
-    <!-- Pop Ups -->
- <div class="pop-up-sign sign-in pop-up-sign--hidden">
+
+    <div class="pop-up-sign sign-in pop-up-sign--hidden">
         <div class="pop-up-sign__content">
             <h2 class="pop-up-sign__head">Sign In</h2>
             <form class="pop-up-sign__form login" method="POST" action="{% url 'account_login' %}">
@@ -231,17 +233,16 @@
             <div class="pop-up-sign__close" onclick="togglePopUp(signin)"></div>
         </div>
     </div>
-
     <div class="pop-up-sign sign-up pop-up-sign--hidden">
         <div class="pop-up-sign__content">
             <h2 class="pop-up-sign__head">Sign Up</h2>
-            <form class="pop-up-sign__form signup" id="signup_form" method="POST" action="{% url 'account_signup' %}">
+            <form class="signup pop-up-sign__form" id="signup_form" method="POST" action="{% url 'home' %}">
                 {% csrf_token %}
                 {{ form.username }}{{ form.email }}{{ form.password1 }}{{ form.password2 }}
-{#                <input type="text" name='{{ signupform.username }}' placeholder="Enter username">#}
-{#                <input type="email" name='{{ signupform.email }}' placeholder="Enter email">#}
-{#                <input type="password" name='{{ signupform.password1 }}' placeholder="Enter password">#}
-{#                <input type="password" name='{{ signupform.password1 }}' placeholder="Enter password (confirm)">#}
+{#                <input type="text" name='{{ form.username }}' placeholder="Enter username">#}
+{#                <input type="email" name='{{ form.email }}' placeholder="Enter email">#}
+{#                <input type="password" name='{{ form.password1 }}' placeholder="Enter password">#}
+{#                <input type="password" name='{{ form.password1 }}' placeholder="Enter password (confirm)">#}
                 {% if redirect_field_value %}
                     <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
                 {% endif %}
