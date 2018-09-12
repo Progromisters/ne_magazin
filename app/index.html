@@ -13,56 +13,56 @@
 <body>
   <header class="header page-header" name="top">
     <div class="header-upper">
-        <h1 class="header-upper__logo">
-          <a href="">
-            <img src="img/bag.png" alt="">
-            <p>Commerece </p>
-          </a>
-        </h1>
-        <div class="header-upper__widget">
-          <div class="search-wrapper">
-            <input class="search-input" type="text" placeholder="Search">
-            <button class="search-button" value="Search"><i class="fas fa-search"></i></button>
-          </div>
-          <input class="button button--blue signup-button" type="button" value="Sign Up" onclick="togglePopUp(signup)">
+      <h1 class="header-upper__logo">
+        <a href="">
+          <img src="img/bag.png" alt="">
+          <p>Commerece </p>
+        </a>
+      </h1>
+      <div class="header-upper__widget">
+        <div class="search-wrapper">
+          <input class="search-input" type="text" placeholder="Search">
+          <button class="search-button" value="Search"><i class="fas fa-search"></i></button>
         </div>
+        <input class="button signup-button bgcolor--wave" type="button" value="Sign Up" onclick="togglePopUp(signup)">
+      </div>
     </div>
     <nav class="main-nav">
       <ul class="nav-list">
         <li class="nav-list__item item-home"><a href=""><i class="fas fa-home"></i></a></li>
         <li class="nav-list__item dropdown">Shop by Category <i class="fas fa-angle-down"></i>
           <ul class="dropdown__menu">
-              <li class="dropdown__item"><a href="#">Пункт1</a></li>
-              <li class="dropdown__item"><a href="#">Пункт2</a></li>
-              <li class="dropdown__item"><a href="#">Пункт3</a></li>
+            <li class="dropdown__item"><a href="#">Пункт1</a></li>
+            <li class="dropdown__item"><a href="#">Пункт2</a></li>
+            <li class="dropdown__item"><a href="#">Пункт3</a></li>
           </ul>
         </li>
         <li class="nav-list__item dropdown">Shop by Brand <i class="fas fa-angle-down"></i>
-            <ul class = "dropdown__menu">
-              <li class="dropdown__item"><a href="#">Пункт1</a></li>
-              <li class="dropdown__item"><a href="#">Пункт2</a></li>
-              <li class="dropdown__item"><a href="#">Пункт3</a></li>
+          <ul class = "dropdown__menu">
+            <li class="dropdown__item"><a href="#">Пункт1</a></li>
+            <li class="dropdown__item"><a href="#">Пункт2</a></li>
+            <li class="dropdown__item"><a href="#">Пункт3</a></li>
           </ul>
         </li>
         <li class="nav-list__item"><a href="">Tranding</a></li>
-        <li class="nav-list__item"><a href="">Offers</a></li>
+        <li class="nav-list__item nav-list__item--new"><a href="">Offers</a></li>
         <li class="nav-list__item"><a href="">Contact us</a></li>
         </li>
         <li class="nav-list__item item-buttons">
-          <button class="button button--yellow" href=""><i class="fab fa-opencart"></i> Cart 0</button><button class="button button--blue" href="" onclick="togglePopUp(signin)"><i class="far fa-user"></i> Sign in</button>
+          <button class="button bgcolor--yellow" href=""><i class="fab fa-opencart"></i> Cart 0</button><button class="button bgcolor--wave" href="" onclick="togglePopUp(signin)"><i class="far fa-user"></i> Sign in</button>
         </li>
       </ul>
     </nav>
   </header>
-  <div class="gradient">
-    <div class="slickimg"><img src="./img/slickimg.png" alt=""></div>
-    <div class="slickimg"><img src="./img/slickimg.png" alt=""></div>
+  <div class="slider main-slider">
+    <div class="main-slider__img"><img src="./img/slickimg.png" alt=""></div>
+    <div class="main-slider__img"><img src="./img/slickimg.png" alt=""></div>
   </div>
   <main class="page-main">
-    <!-- <section class="section welcome">
+    <section class="section welcome">
       <article class="section__content welcome__content">
-        <h2 class="section__title">Welcome!</h2>
-        <h3 class="section__subtitle">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel inventore dolorem a.</h3>
+        <h2 class="title section__title">Welcome!</h2>
+        <h3 class="subtitle section__subtitle">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel inventore dolorem a.</h3>
         <p class="section__text">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci excepturi accusamus aspernatur? Rerum laborum possimus quam et voluptates voluptate accusantium porro eaque ad optio sit odio facere molestias iusto, a mollitia! Nobis amet numquam magnam sapiente dicta natus similique consectetur ex, voluptate dolore reprehenderit iusto temporibus excepturi autem ab quasi.
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci excepturi accusamus aspernatur? Rerum laborum possimus quam et voluptates voluptate accusantium porro eaque ad optio sit odio facere molestias iusto, a mollitia! Nobis amet numquam magnam sapiente dicta natus similique consectetur ex, voluptate dolore reprehenderit iusto temporibus excepturi autem ab quasi.          
@@ -71,48 +71,48 @@
     </section>
     <section class="features">
       <ul class="features__list features-list">
-        <li class="features-list__item features-item features-item--yellow">
-          <div class="features-item__content features-item__content--yellow">
+        <li class="features-list__item features-item color--yellow">
+          <div class="features-item__content bgcolor--yellow">
             <h3 class="features-item__title">Computers</h3>
             <p class="features-item__subtitle">Lorem ipsum dolor sit.</p>
             <a href="" class="far fa-folder-open features-item__button"></a>             
           </div>
           <i class="fas fa-laptop features-item__icon features-item__icon--yellow"></i>
         </li>
-        <li class="features-list__item features-item features-item--red">
-          <div class="features-item__content features-item__content--red">
+        <li class="features-list__item features-item color--red">
+          <div class="features-item__content bgcolor--red">
             <h3 class="features-item__title">Music</h3>
             <p class="features-item__subtitle">Lorem ipsum dolor sit.</p>
             <a href="" class="far fa-folder-open features-item__button"></a> 
           </div>
           <i class="fas fa-music features-item__icon features-item__icon--red"></i>
         </li>
-        <li class="features-list__item features-item features-item--wave">
-          <div class="features-item__content features-item__content--wave">
+        <li class="features-list__item features-item color--wave">
+          <div class="features-item__content bgcolor--wave">
             <h3 class="features-item__title">Website</h3>
             <p class="features-item__subtitle">Lorem ipsum dolor sit.</p>
             <a href="" class="far fa-folder-open features-item__button"></a> 
           </div>
           <i class="fas fa-globe-americas features-item__icon features-item__icon--wave"></i>
         </li>
-        <li class="features-list__item features-item features-item--green">
-          <div class="features-item__content features-item__content--green features-item__content--last">
+        <li class="features-list__item features-item color--green">
+          <div class="features-item__content bgcolor--green features-item__content--last">
             <h3 class="features-item__title">Android App</h3>
             <p class="features-item__subtitle">Lorem ipsum dolor sit.</p>
             <a href="" class="far fa-folder-open features-item__button"></a> 
           </div>
           <i class="fab fa-android features-item__icon features-item__icon--green"></i>
         </li>
-        <li class="features-list__item features-item features-item--blue">
-          <div class="features-item__content features-item__content--blue features-item__content--last">
+        <li class="features-list__item features-item color--blue">
+          <div class="features-item__content bgcolor--blue features-item__content--last">
             <h3 class="features-item__title">ios App</h3>
             <p class="features-item__subtitle">Lorem ipsum dolor sit.</p>
             <a href="" class="far fa-folder-open features-item__button"></a>            
           </div>
           <i class="fab fa-apple features-item__icon features-item__icon--blue"></i>
         </li>
-        <li class="features-list__item features-item features-item--navy">
-          <div class="features-item__content features-item__content--navy features-item__content--last">
+        <li class="features-list__item features-item color--navy">
+          <div class="features-item__content bgcolor--navy features-item__content--last">
             <h3 class="features-item__title">Other</h3>
             <p class="features-item__subtitle">Lorem ipsum dolor sit.</p>
             <a href="" class="far fa-folder-open features-item__button"></a>
@@ -123,16 +123,16 @@
     </section>
     <section class="section products">
       <article class="section__content products__content">
-        <h2 class="section__title">Products</h2>
-        <h3 class="section__subtitle">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel inventore dolorem a.</h3>
+        <h2 class="title section__title">Products</h2>
+        <h3 class="subtitle section__subtitle">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel inventore dolorem a.</h3>
         <ul class="product-list">
           <li class="product-list__item product">
             <div class="product__img"><img src="img/hd.png" alt=""></div>
-            <article class="section product__content">
-              <h3 class="section__title product__title">Hard Disk</h3>
-              <p class="section__subtitle product__subtitle">Lorem ipsum dolor sit amet.</p>
+            <article class="product__content">
+              <h3 class="title product__title">Hard Disk</h3>
+              <p class="subtitle product__subtitle">Lorem ipsum dolor sit amet.</p>
               <p class="product__price">$200.00<span class="product__price-before"></span> </p>
-              <button class="button button--blue product__buy"><i class="fas fa-shopping-cart"></i> +</button>
+              <button class="button bgcolor--wave product__buy"><i class="fas fa-shopping-cart"></i> +</button>
               <div class="product__other-buttons">
                 <button class="button wishlist"><i class="fas fa-heart"></i> Add to wishlist</button>
                 <button class="button compare"><i class="far fa-copy"></i> Add to compare</button>
@@ -141,11 +141,11 @@
           </li>
           <li class="product-list__item product">
             <div class="product__img"><img src="img/game.png" alt=""></div>
-            <article class="section product__content">
-              <h3 class="section__title product__title">Game remote</h3>
-              <p class="section__subtitle product__subtitle">Lorem ipsum dolor sit amet.</p>
+            <article class="product__content">
+              <h3 class="title product__title">Game remote</h3>
+              <p class="subtitle product__subtitle">Lorem ipsum dolor sit amet.</p>
               <p class="product__price">$200.00<span class="product__price-before"></span> </p>
-              <button class="button button--blue product__buy"><i class="fas fa-shopping-cart"></i> +</button>
+              <button class="button bgcolor--wave product__buy"><i class="fas fa-shopping-cart"></i> +</button>
               <div class="product__other-buttons">
                 <button class="button wishlist"><i class="fas fa-heart"></i> Add to wishlist</button>
                 <button class="button compare"><i class="far fa-copy"></i> Add to compare</button>
@@ -154,11 +154,11 @@
           </li>
           <li class="product-list__item product">
             <div class="product__img"><img src="img/disk.png" alt=""></div>
-            <article class="section product__content">
-              <h3 class="section__title product__title">CD / DVD</h3>
-              <p class="section__subtitle product__subtitle">Lorem ipsum dolor sit amet.</p>
+            <article class="product__content">
+              <h3 class="title product__title">CD / DVD</h3>
+              <p class="subtitle product__subtitle">Lorem ipsum dolor sit amet.</p>
               <p class="product__price">$200.00<span class="product__price-before"></span> </p>
-              <button class="button button--blue product__buy"><i class="fas fa-shopping-cart"></i> +</button>
+              <button class="button bgcolor--wave product__buy"><i class="fas fa-shopping-cart"></i> +</button>
               <div class="product__other-buttons">
                 <button class="button wishlist"><i class="fas fa-heart"></i> Add to wishlist</button>
                 <button class="button compare"><i class="far fa-copy"></i> Add to compare</button>
@@ -167,11 +167,11 @@
           </li>
           <li class="product-list__item product">
             <div class="product__img"><img src="img/laptop.png" alt=""></div>
-            <article class="section product__content">
-              <h3 class="section__title product__title">Laptop</h3>
-              <p class="section__subtitle product__subtitle">Lorem ipsum dolor sit amet.</p>
+            <article class="product__content">
+              <h3 class="title product__title">Laptop</h3>
+              <p class="subtitle product__subtitle">Lorem ipsum dolor sit amet.</p>
               <p class="product__price">$200.00<span class="product__price-before"></span> </p>
-              <button class="button button--blue product__buy"><i class="fas fa-shopping-cart"></i> +</button>
+              <button class="button bgcolor--wave product__buy"><i class="fas fa-shopping-cart"></i> +</button>
               <div class="product__other-buttons">
                 <button class="button wishlist"><i class="fas fa-heart"></i> Add to wishlist</button>
                 <button class="button compare"><i class="far fa-copy"></i> Add to compare</button>
@@ -180,11 +180,11 @@
           </li>
           <li class="product-list__item product">
             <div class="product__img"><img src="img/book.png" alt=""></div>
-            <article class="section product__content">
-              <h3 class="section__title product__title">Books</h3>
-              <p class="section__subtitle product__subtitle">Lorem ipsum dolor sit amet.</p>
+            <article class="product__content">
+              <h3 class="title product__title">Books</h3>
+              <p class="subtitle product__subtitle">Lorem ipsum dolor sit amet.</p>
               <p class="product__price product__price--sale">$200.00<span class="product__price-before">$1000.00</span> </p>
-              <button class="button button--blue product__buy"><i class="fas fa-shopping-cart"></i> +</button>
+              <button class="button bgcolor--wave product__buy"><i class="fas fa-shopping-cart"></i> +</button>
               <div class="product__other-buttons">
                 <button class="button wishlist"><i class="fas fa-heart"></i> Add to wishlist</button>
                 <button class="button compare"><i class="far fa-copy"></i> Add to compare</button>
@@ -193,11 +193,11 @@
           </li>
           <li class="product-list__item product">
             <div class="product__img"><img src="img/camera.png" alt=""></div>
-            <article class="section product__content">
-              <h3 class="section__title product__title">Camera</h3>
-              <p class="section__subtitle product__subtitle">Lorem ipsum dolor sit amet.</p>
+            <article class="product__content">
+              <h3 class="title product__title">Camera</h3>
+              <p class="subtitle product__subtitle">Lorem ipsum dolor sit amet.</p>
               <p class="product__price product__price--sale">$200.00<span class="product__price-before">$300.00</span> </p>
-              <button class="button button--blue product__buy"><i class="fas fa-shopping-cart"></i> +</button>
+              <button class="button bgcolor--wave product__buy"><i class="fas fa-shopping-cart"></i> +</button>
               <div class="product__other-buttons">
                 <button class="button wishlist"><i class="fas fa-heart"></i> Add to wishlist</button>
                 <button class="button compare"><i class="far fa-copy"></i> Add to compare</button>
@@ -209,7 +209,7 @@
     </section>
     <section class="section counters">
       <article class="section__content counters__content">
-          <h2 class="section__title counters__title">Counters</h2>
+          <h2 class="title section__title counters__title">Counters</h2>
           <ul class="counters__list counters-list">
             <li class="counters-list__item">
               <p class="counters-list__number">600</p>
@@ -231,7 +231,7 @@
     </section>
     <section class="section advantage">
       <article class="section__content advantage__content">
-      <h2 class="section__title advantage__title">Fast and reliable delivery services</h2>
+      <h2 class="title section__title advantage__title">Fast and reliable delivery services</h2>
       <ul class="advantage__list advantage-list">
         <li class="advantage-list__item">
           <div class="advantage-list__img fas fa-truck"></div>
@@ -263,95 +263,94 @@
         </li>
       </ul>
       </article>
-      </section>
-      <div class="list-wrapper">
-        <ul class="advantage__list other-advantage-list">
-          <li class="other-advantage-list__item">
-            <div class="other-advantage-list__head">
-              <div class="other-advantage-list__img fas fa-calculator"></div>
-              <h3 class="other-advantage-list__title">
-                Delivery
-                <span>costs</span>
-              <h2 class="other-advantage-list__subtitle"></h2>
-            </div>
-            <div class="other-advantage-list__content">
-              <p class="other-advantage-list__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam delectus molestiae a unde ipsam nam qui, quidem reiciendis hic blanditiis.</p>
-              <a href="" class="other-advantage-list__more fas fa-angle-double-right"></a>
-            </div>
-          </li>
-          <li class="other-advantage-list__item other-advantage-list__item--yellow">
-            <div class="other-advantage-list__head">
-              <div class="other-advantage-list__img other-advantage-list__img--red far fa-clock"></div>
-              <h3 class="other-advantage-list__title other-advantage-list__title--gray">
-                Terms
-                <span>of delivery</span>
-              </h3>
-            </div>
-            <div class="other-advantage-list__content">
-              <p class="other-advantage-list__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam delectus molestiae a unde ipsam nam qui, quidem reiciendis hic blanditiis.</p>
-              <a href=""p class="other-advantage-list__more other-advantage-list__more--red fas fa-angle-double-right"></a>
-            </div>
-          </li>
-          <li class="other-advantage-list__item">
-            <div class="other-advantage-list__head">
-              <div class="other-advantage-list__img fas fa-paper-plane"></div>
-              <h3 class="other-advantage-list__title">
-                Nearest
-                <span>branch</span>
-              </h3>
-              <h2 class="other-advantage-list__subtitle"></h2>
-            </div>
-            <div class="other-advantage-list__content">
-              <p class="other-advantage-list__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam delectus molestiae a unde ipsam nam qui, quidem reiciendis hic blanditiis.</p>
-              <a href="" class="other-advantage-list__more fas fa-angle-double-right"></a>
-            </div>
-          </li>
-          <li class="other-advantage-list__item other-advantage-list__item--gray">
-            <div class="other-advantage-list__head">
-              <div class="other-advantage-list__img fas fa-phone"></div>
-              <h3 class="other-advantage-list__title">
-                Calling
-                <span>courier</span>
-              </h3>
-              <h2 class="other-advantage-list__subtitle"></h2>
-            </div>
-            <div class="other-advantage-list__content">
-              <p class="other-advantage-list__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam delectus molestiae a unde ipsam nam qui, quidem reiciendis hic blanditiis.</p>
-              <a href="" class="other-advantage-list__more fas fa-angle-double-right"></a>
-            </div>
-          </li>  
-        </ul>
-      </div>
-      <section class="section other-info">
-        <article class="other-info__article">
-          <h2 class="other-info__title">
-            About
-            <span>our company</span>
-          </h2>
-          <p class="other-info__subtitle">Everything we do, we do for you</p>
-          <p class="other-info__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus sapiente distinctio et maxime doloribus nihil esse cumque suscipit, mollitia aliquam.Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus sapiente distinctio et maxime doloribus nihil esse cumque suscipit, mollitia aliquam.</p>
-          <p class="other-info__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur facere nulla vero, consectetur ex ipsa recusandae officiis est quod maxime.Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus sapiente distinctio et maxime doloribus nihil esse cumque suscipit, mollitia aliquam.</p>
-          <a href="" class="button button--blue other-info__more">Read more</a>
-        </article>
-        <article class="other-info__article">
-          <h2 class="other-info__title">
-            Delivery
-            <span>solutions</span>
-          </h2>
-          <ol class="other-info__list other-info-list">
-            <li class="other-info-list__item">Every day, more than 1,000 jorneys</li>
-            <li class="other-info-list__item">More than 240 missions</li>
-            <li class="other-info-list__item">29 sortings and distibution centers</li>
-            <li class="other-info-list__item">More than 1 thousand employees</li>
-          </ol>
-        </article>
-      </section>
-    </section> -->
+    </section>
+    <div class="list-wrapper">
+      <ul class="advantage__list other-advantage-list">
+        <li class="other-advantage-list__item">
+          <div class="other-advantage-list__head">
+            <div class="other-advantage-list__img fas fa-calculator"></div>
+            <h3 class="other-advantage-list__title">
+              Delivery
+              <span>costs</span>
+            <h2 class="other-advantage-list__subtitle"></h2>
+          </div>
+          <div class="other-advantage-list__content">
+            <p class="other-advantage-list__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam delectus molestiae a unde ipsam nam qui, quidem reiciendis hic blanditiis.</p>
+            <a href="" class="other-advantage-list__more fas fa-angle-double-right color--white"></a>
+          </div>
+        </li>
+        <li class="other-advantage-list__item bgcolor--yellow">
+          <div class="other-advantage-list__head">
+            <div class="other-advantage-list__img color--red far fa-clock"></div>
+            <h3 class="other-advantage-list__title color--gray">
+              Terms
+              <span>of delivery</span>
+            </h3>
+          </div>
+          <div class="other-advantage-list__content color--gray">
+            <p class="other-advantage-list__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam delectus molestiae a unde ipsam nam qui, quidem reiciendis hic blanditiis.</p>
+            <a href=""p class="other-advantage-list__more fas fa-angle-double-right color--red"></a>
+          </div>
+        </li>
+        <li class="other-advantage-list__item">
+          <div class="other-advantage-list__head">
+            <div class="other-advantage-list__img fas fa-paper-plane"></div>
+            <h3 class="other-advantage-list__title">
+              Nearest
+              <span>branch</span>
+            </h3>
+            <h2 class="other-advantage-list__subtitle"></h2>
+          </div>
+          <div class="other-advantage-list__content">
+            <p class="other-advantage-list__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam delectus molestiae a unde ipsam nam qui, quidem reiciendis hic blanditiis.</p>
+            <a href="" class="other-advantage-list__more fas fa-angle-double-right color--white"></a>
+          </div>
+        </li>
+        <li class="other-advantage-list__item bgcolor--gray">
+          <div class="other-advantage-list__head">
+            <div class="other-advantage-list__img fas fa-phone"></div>
+            <h3 class="other-advantage-list__title">
+              Calling
+              <span>courier</span>
+            </h3>
+            <h2 class="other-advantage-list__subtitle"></h2>
+          </div>
+          <div class="other-advantage-list__content">
+            <p class="other-advantage-list__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam delectus molestiae a unde ipsam nam qui, quidem reiciendis hic blanditiis.</p>
+            <a href="" class="other-advantage-list__more fas fa-angle-double-right color--white"></a>
+          </div>
+        </li>  
+      </ul>
+    </div>
+    <section class="section other-info">
+      <article class="other-info__article">
+        <h2 class="other-info__title">
+          About
+          <span>our company</span>
+        </h2>
+        <p class="other-info__subtitle">Everything we do, we do for you</p>
+        <p class="other-info__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus sapiente distinctio et maxime doloribus nihil esse cumque suscipit, mollitia aliquam.Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus sapiente distinctio et maxime doloribus nihil esse cumque suscipit, mollitia aliquam.</p>
+        <p class="other-info__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur facere nulla vero, consectetur ex ipsa recusandae officiis est quod maxime.Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus sapiente distinctio et maxime doloribus nihil esse cumque suscipit, mollitia aliquam.</p>
+        <a href="" class="button bgcolor--wave other-info__more">Read more</a>
+      </article>
+      <article class="other-info__article">
+        <h2 class="other-info__title">
+          Delivery
+          <span>solutions</span>
+        </h2>
+        <ol class="other-info__list other-info-list">
+          <li class="other-info-list__item">Every day, more than 1,000 jorneys</li>
+          <li class="other-info-list__item">More than 240 missions</li>
+          <li class="other-info-list__item">29 sortings and distibution centers</li>
+          <li class="other-info-list__item">More than 1 thousand employees</li>
+        </ol>
+      </article>
+    </section>
   </main>
   <footer class="page-footer">
     <ul class="page-footer__list footer-list">
       <li class="footer-list__item">
-        <h3 class="section__title footer-list__title">Information</h3>
+        <h3 class="title footer-list__title">Information</h3>
         <ul class="footer-nav">
           <li class="footer-nav__item"><a href="">About Us</a></li>
           <li class="footer-nav__item"><a href="">Delivery</a></li>
@@ -360,7 +359,7 @@
         </ul>
       </li>
       <li class="footer-list__item">
-       <h3 class="section__title footer-list__title">Customer Service</h3>
+       <h3 class="title footer-list__title">Customer Service</h3>
         <ul class="footer-nav">
           <li class="footer-nav__item"><a href="">Contact Us</a></li>
           <li class="footer-nav__item"><a href="">Returns</a></li>
@@ -368,7 +367,7 @@
         </ul>
       </li>
       <li class="footer-list__item">
-        <h3 class="section__title footer-list__title">Extras</h3>
+        <h3 class="title footer-list__title">Extras</h3>
         <ul class="footer-nav">
           <li class="footer-nav__item"><a href="">Brands</a></li>
           <li class="footer-nav__item"><a href="">Gift Vouchers</a></li>
@@ -377,7 +376,7 @@
         </ul>
       </li>
       <li class="footer-list__item">
-        <h3 class="section__title footer-list__title">My Account</h3>
+        <h3 class="title footer-list__title">My Account</h3>
         <ul class="footer-nav">
           <li class="footer-nav__item"><a href="">My Account</a></li>
           <li class="footer-nav__item"><a href="">Order History</a></li>

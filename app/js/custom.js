@@ -1,5 +1,5 @@
 $(function(){
-  $('.gradient').slick({
+  $('.slider').slick({
     //Бесконечная прокрутка    
     infinite: true,  
     centerMode: true,
