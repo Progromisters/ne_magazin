@@ -4,6 +4,10 @@ body{
   margin: 0;
 }
 
+//fix features
+//fix products
+//fix advantage
+
 .button{
   border: 0;
   text-decoration: none;
@@ -412,13 +416,11 @@ body{
 }
 
 .features{
-  margin: 0 auto;
+  @include wrapper();
   max-width: 1600px;
 }
 .features-list{
-  margin: 0;
-  margin-right: -15px;
-  margin-top: -15px;
+  margin: 0 -15px 0 0;
   padding: 0;
   list-style: none;
   display: flex;
@@ -428,11 +430,8 @@ body{
     display: flex;
     height: 250px;
     justify-content: space-between;
-    margin: 0;
+    margin: 0 15px 15px 0;
     padding: 0;
-    margin: 15px;
-    margin-left: 0;
-    margin-bottom: 0;
     border: 1px solid black;
     width: 500px;
   }
@@ -445,7 +444,6 @@ body{
     align-items: center;
     flex-direction: column;
     width: 50%;
-    flex-grow: 1;
     color: #ffffff;
     font-family: "Roboto", Arial, Helvetica, sans-serif;
     text-align: center;
@@ -548,16 +546,16 @@ body{
 .product-list{
   padding: 0;
   @include lg(margin-right, -40px);
-  margin-right: -150px;
+  margin-right: -100px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   list-style: none;
   &__item{
     @include lg(margin-right, 40px);
-    width: 300px;
+    max-width: 300px;
     padding: 0;
-    margin-right: 150px; 
+    margin-right: 100px; 
   }
 }
 
@@ -653,6 +651,7 @@ body{
 }
 
 .counters{
+
   background:
     linear-gradient( 0deg, rgba(241, 77, 77, 0.8) 0%, rgba(241, 77, 77, 0.8) 100%),
     url("../img/bgcount.png");
@@ -714,7 +713,7 @@ body{
 }
 
 .advantage{
-  max-width: 1600px;
+  @include wrapper();
   display: flex;
   flex-direction: column;
   padding-left: 0;
@@ -729,7 +728,6 @@ body{
 }
 
 .advantage-list{
-  @include wrapper();
   list-style: none;
   display: flex;
   justify-content: space-between;
@@ -778,8 +776,7 @@ body{
 }
 
 .list-wrapper{
-  max-width: 1600px;
-  margin: 40px auto;
+  @include wrapper();
   background-color: #f14d4d;
 }
 
@@ -787,13 +784,14 @@ body{
   padding: 0;
   margin: 0;
   @include row-flex();
-  @include wrapper();
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   list-style: none;
   color: #ffffff;
   &__item{
     @include col();
     @include size(1);
+    @include size-lg(2);
+    @include size-md(4);
     padding: 20px;
     &--yellow{
       background-color: #f0cc50;
@@ -966,6 +964,7 @@ body{
   .copy, .follow{
     @include col();
     @include size(2);
+    @include size-md(4);
   }
 }
 
@@ -989,6 +988,7 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
   &__text{
     font-size: 30px;
     font-weight: 300;
