@@ -909,6 +909,7 @@ body {
 .page-footer {
   background-color: #37393e;
   color: #ffffff;
+  padding-bottom: 20px;
 }
 
 .footer-list {
