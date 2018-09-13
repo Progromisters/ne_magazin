@@ -704,8 +704,6 @@ body {
   padding-right: 100px;
   display: flex;
   flex-direction: column;
-  padding-left: 0;
-  padding-right: 0;
 }
 
 .advantage__title {
@@ -938,6 +936,10 @@ body {
 .footer-list__title {
   color: #ffffff;
   font-size: 30px;
+}
+
+.footer-list__title::after {
+  margin: 0;
 }
 
 .footer-nav {

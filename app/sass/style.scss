@@ -563,8 +563,6 @@ body{
   @include wrapper();
   display: flex;
   flex-direction: column;
-  padding-left: 0;
-  padding-right: 0;
   &__title{
     text-transform: uppercase;
     margin-bottom: 50px;
@@ -626,8 +624,6 @@ body{
 }
 
 .other-advantage-list{
-  
-  
   @include row-flex();
   list-style: none;
   color: #ffffff;
@@ -640,8 +636,6 @@ body{
     transition: 0.2s width;
   }
   &__title{
-    
-    
     display: flex;
     flex-direction: column;
     align-items:flex-start;
@@ -666,7 +660,6 @@ body{
   }
   &__more{
     text-decoration: none;
-    
     float: left;
     font-size: 40px;
   }
@@ -675,12 +668,10 @@ body{
 //OTHER INFO
 
 .other-info{
-  
   padding-bottom: 75px;
   @include row-flex();
   @include wrapper();
   align-items: stretch;
-  
   &__article{
     @include col();
     @include size(2);
@@ -688,7 +679,6 @@ body{
     padding-right: 70px;
   }
   &__title{
-    
     margin-bottom: 30px;
     padding-bottom: 20px;
     display: flex;
@@ -728,8 +718,6 @@ body{
 }
 
 .other-info-list{
-  
-  
   list-style-type: none; 
   counter-reset: num; 
   &__item{
@@ -754,7 +742,6 @@ body{
 
 .page-footer{
   background-color: #37393e;
-  
   color: #ffffff;
 }
 
@@ -773,6 +760,9 @@ body{
   &__title{
     color: #ffffff;
     font-size: 30px;
+    &::after{
+      margin: 0;
+    }
   }
 }
 
@@ -914,8 +904,6 @@ body{
 }
 
 .page-up{
-  
-  
   position: fixed;
   right: 0;
   bottom: 60px;
