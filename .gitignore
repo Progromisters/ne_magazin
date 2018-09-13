@@ -26,7 +26,6 @@ __pycache__/
 # Distribution / packaging
 .Python
 env/
-build/
 develop-eggs/
 dist/
 downloads/
@@ -107,6 +106,7 @@ ENV/
 # Rope project settings
 .ropeproject
 
-/node_modules 
-package-lock.json 
-smart-grid-config.js
+/**/node_modules 
+/**/package-lock.json 
+/**/smart-grid-config.js
+
