@@ -357,6 +357,7 @@ body{
 }
 
 .features-item{
+  border-color: inherit;
   &__content{
     display: flex;
     justify-content: center;
@@ -365,6 +366,9 @@ body{
     width: 50%;
     color: #ffffff;
     text-align: center;
+    &--left{
+      order: 1;
+    }
   }
   &__title{
     font-size: 36px;
@@ -397,7 +401,6 @@ body{
     justify-content: center;
     align-items: center;
   }
-  border-color: inherit;
 }
 
 //PRODUCT

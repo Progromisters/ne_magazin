@@ -499,6 +499,10 @@ body {
   text-align: center;
 }
 
+.features-item__content--left {
+  order: 1;
+}
+
 .features-item__title {
   font-size: 36px;
   font-weight: 500;
