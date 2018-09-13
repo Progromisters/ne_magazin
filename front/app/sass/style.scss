@@ -94,6 +94,7 @@ body{
 }
 
 .section{
+  @include md(padding, 20px 0);
   padding: 75px 0;
   @include wrapper();
   display: flex;
@@ -129,9 +130,12 @@ body{
   &__logo, &__widget{
     @include col();
     @include size(2);
+    @include size-sm(4);
+    
   }
   &__logo{
-    justify-content: flex-start;
+    display: flex;
+    @include sm(justify-content, center);
     margin-top: auto;
     font-size: 32px;
     font-family: 'Roboto';
@@ -142,7 +146,6 @@ body{
       align-items: flex-end;
       text-decoration: none;
       color: rgba(52, 39, 44, 0.8);
-      
     }
     & p{
       margin-left: 40px;
@@ -159,6 +162,8 @@ body{
     }
   }
   &__widget{
+    @include sm(margin-top, 20px);
+    @include xs(flex-direction, column);
     position: relative;
     justify-content: flex-end;
     display: flex;
@@ -167,6 +172,8 @@ body{
 }
 
 .search-wrapper{
+  @include sm(margin-left, auto);
+  @include xs(width, 100%);
   position: relative;
   display: flex;
   align-items: center;
@@ -174,6 +181,7 @@ body{
 }
 
 .search-input{
+  @include xs(width, 100%);
   width: 273px;
   height: 40px;
   border-style: solid;
@@ -194,19 +202,27 @@ body{
 }
 
 .signup-button{
+  @include sm(margin-right, auto);
+  @include xs(width, 100%);
   width: 133px;
   height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 16px;
 }
 
 //MAIN NAVIGATION
 
 .main-nav{
+  @include sm(display, none);
   background-color: #37393e;
 }
 
 .nav-list{
   @include wrapper();
+  @include lg(padding-left, 10px);
+  @include lg(padding-right, 10px);
   display: flex;
   list-style: none;
   justify-content: space-between;
@@ -243,6 +259,7 @@ body{
 }
 
 .item-home{
+  @include lg(display, none);
   margin: 10px 0;
   & a{
     display: flex;
@@ -260,6 +277,7 @@ body{
   display: flex;
   align-self: stretch;
   &>button{
+    margin: 10px 0;
     height: 100%;
     display: inline-block;
     padding: 0 10px;
@@ -295,7 +313,8 @@ body{
 
 //SLIDER
 
-.main-slider{  
+.main-slider{ 
+  @include xs(display, none !important);
   padding-top: 20px;
   background: linear-gradient(to right, #d38312, #a83279);
   max-width: 1600px;
@@ -359,6 +378,7 @@ body{
 .features-item{
   border-color: inherit;
   &__content{
+    @include xs(width, 100%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -366,6 +386,7 @@ body{
     width: 50%;
     color: #ffffff;
     text-align: center;
+    transition: 1s width;
     &--left{
       order: 1;
     }
@@ -394,12 +415,14 @@ body{
     }
   }
   &__icon{
+    @include xs(display, none);
     width: 50%;
     flex-grow: 1;
     font-size: 170px;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: 1s width;
   }
 }
 
@@ -407,6 +430,8 @@ body{
 
 .product-list{
   @include lg(margin-right, -40px);
+  @include md(justify-content, center);
+  @include sm(margin-right, 0);
   margin-right: -100px;
   display: flex;
   justify-content: space-between;
@@ -414,6 +439,7 @@ body{
   list-style: none;
   &__item{
     @include lg(margin-right, 40px);
+    @include sm(margin, 0);
     max-width: 300px;
     margin-right: 100px; 
   }
@@ -473,7 +499,6 @@ body{
   }
   &__price-before{
     font-size: 30px;
-                  
     color: rgba(241, 77, 77, 0.8);
     text-decoration: line-through;
     
@@ -532,7 +557,8 @@ body{
   list-style: none;
   color: #ffffff;
   &__item{
-    width: 270px;
+    flex-grow: 1;
+    margin-top: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -555,6 +581,7 @@ body{
     font-weight: 300;
   }
   &__subtitle{
+    width: 270px;
     font-size: 14px;
     color: #ffffff;
   }
@@ -576,6 +603,8 @@ body{
 }
 
 .advantage-list{
+  @include sm(justify-content, center);
+  @include sm(margin, 0);
   list-style: none;
   display: flex;
   justify-content: space-between;
@@ -584,13 +613,14 @@ body{
   align-items: center;
   flex-wrap: wrap;
   &__item{
-    width: 550px;
+    max-width: 550px;
     display: flex;
     justify-content: center;
     margin-right: 15px;
     margin-bottom: 60px;
   }
   &__img{
+    @include sm(display, none);
     width: 540px;
     height: 180px;
     display: flex;
@@ -601,6 +631,7 @@ body{
     color: #00a8a9;
   }
   &__content{
+    @include sm(margin, 0);
     margin: 0 auto;
     margin-left: 20px;
     text-align: start;
@@ -623,6 +654,7 @@ body{
 .list-wrapper{
   @include wrapper();
   @include lg(padding, 0);
+  @include sm(padding, 0);
   background-color: #f14d4d;
 }
 
@@ -678,6 +710,9 @@ body{
   &__article{
     @include col();
     @include size(2);
+    @include size-md(4);
+    @include md(padding, 0);
+    @include md(margin-top, 30px);
     text-align: start;
     padding-right: 70px;
   }
@@ -759,7 +794,8 @@ body{
   &__item{
     @include col();
     @include size(1);
-    border-bottom: 1px solid #000000;
+    @include size-sm(2);
+    @include size-xs(4);
   }
   &__title{
     color: #ffffff;
@@ -786,10 +822,14 @@ body{
 //COPY AND FOLLOW
 
 .copy-follow{
+  
+  
+  border-top: 1px solid #000000;
   @include row-flex();
   @include wrapper();
   padding-top: 40px;
   .copy, .follow{
+    
     @include col();
     @include size(2);
     @include size-md(4);
@@ -797,10 +837,15 @@ body{
 }
 
 .copy{
+  @include md(display, flex);
+  @include md(flex-direction, column);
+  @include md(align-items, center);
   &__text{
     font-size: 14px;
   }
   &__designed-by{
+    @include md(flex-wrap, wrap);
+    @include md(justify-content, center);
     display: flex;
     align-items: center;
     font-size: 26px;
@@ -812,6 +857,7 @@ body{
 }
 
 .follow{
+  @include md(margin-top, 20px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -819,15 +865,19 @@ body{
   &__text{
     font-size: 30px;
     font-weight: 300;
-    }
+  }
 }
 
 .follow-list{
+  @include xs(padding, 0);
   padding-left: 30px;
   display: flex;
+  flex-wrap: wrap;
   list-style: none;
   &__item{
     &>a{
+      @include xs(width, 40px);
+      @include xs(height, 40px);
       width: 50px;
       height: 50px;
       margin: 0 5px;
@@ -924,7 +974,6 @@ body{
   &__text{
     height: 35px;
     padding: 2px;
-    
     text-transform: uppercase;
     color: #000000;
     font-weight: 300;
