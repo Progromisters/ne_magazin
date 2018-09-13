@@ -1,18 +1,8 @@
-# from django.shortcuts import render
-#
-#
-# def home(request):
-#     return render(request, 'main/index.html', locals())
+from django.shortcuts import render
+from .models import Product
 
 
-from allauth.account.views import SignupView
-from allauth.account.forms import LoginForm
+def home(request):
+    products = Product.objects.filter(is_active=True)
+    return render(request, 'main/index.html', locals())
 
-
-class CustomSignupView(SignupView):
-    def get_context_data(self, **kwargs):
-        context = super(CustomSignupView, self).get_context_data(**kwargs)
-        context['login_form'] = LoginForm()
-        return context
-
-home = CustomSignupView.as_view()
