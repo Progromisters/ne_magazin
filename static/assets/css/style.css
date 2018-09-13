@@ -319,6 +319,9 @@ body {
 }
 
 .signup-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 133px;
   height: 44px;
   font-size: 16px;

@@ -1,44 +1,18 @@
 {% extends "base.html" %}
 
 {% load i18n %}
-{% load account socialaccount %}
 
 {% block content %}
-    <div class="pop-up-sign sign-in pop-up-sign--hidden">
+    <div class="pop-up-sign sign-in">
         <div class="pop-up-sign__content">
             <h2 class="pop-up-sign__head">Sign In</h2>
-            <form class="pop-up-sign__form login" method="POST" action="{% url 'home' %}">
+            <form class="pop-up-sign__form login" method="POST" action="{% url 'account_login' %}">
                 {% csrf_token %}
-                {{ login_form.username }}{{ login_form.password1 }}
-{#                <input type="text" name='{{ form.username }}' placeholder="Enter username">#}
-{#                <input type="password" name='{{ form.password1 }}' placeholder="Enter password">#}
-                {% if redirect_field_value %}
-                    <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
-                {% endif %}
-                <a class="button secondaryAction"
-                   href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
-                <input class="button button--yellow primaryAction" type="submit" value="Sign In">
+                {{ form.login }}{{ form.password }}
+                <input class="button bgcolor--yellow" type="submit" value="Sign In">
             </form>
-            <div class="pop-up-sign__close" onclick="togglePopUp(signin)"></div>
-        </div>
-    </div>
-
-    <div class="pop-up-sign sign-up pop-up-sign--hidden">
-        <div class="pop-up-sign__content">
-            <h2 class="pop-up-sign__head">Sign Up</h2>
-            <form class="pop-up-sign__form signup" id="signup_form" method="POST" action="{% url 'home' %}">
-                {% csrf_token %}
-                {{ form.username }}{{ form.email }}{{ form.password1 }}{{ form.password2 }}
-{#                <input type="text" name='{{ signupform.username }}' placeholder="Enter username">#}
-{#                <input type="email" name='{{ signupform.email }}' placeholder="Enter email">#}
-{#                <input type="password" name='{{ signupform.password1 }}' placeholder="Enter password">#}
-{#                <input type="password" name='{{ signupform.password1 }}' placeholder="Enter password (confirm)">#}
-                {% if redirect_field_value %}
-                    <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
-                {% endif %}
-                <input class="button button--yellow" type="submit" value="Sign Up">
-            </form>
-            <div class="pop-up-sign__close" onclick="togglePopUp(signup)"></div>
         </div>
     </div>
 {% endblock %}
+
+

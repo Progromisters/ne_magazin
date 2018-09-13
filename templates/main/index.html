@@ -5,8 +5,8 @@
 {% block content %}
 
 <!-- <div class="slider main-slider">
-  <div class="main-slider__img"><img src="{% static '/img/slickimg.png' %}" alt=""></div>
-  <div class="main-slider__img"><img src="{% static '/img/slickimg.png' %}" alt=""></div>
+  <div class="main-slider__img"><img src="{% static 'img/slickimg.png' %}" alt=""></div>
+  <div class="main-slider__img"><img src="{% static 'img/slickimg.png' %}" alt=""></div>
 </div> -->
 
 <main class="page-main">
@@ -16,7 +16,7 @@
       <h3 class="subtitle section__subtitle">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel inventore dolorem a.</h3>
       <p class="section__text">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci excepturi accusamus aspernatur? Rerum laborum possimus quam et voluptates voluptate accusantium porro eaque ad optio sit odio facere molestias iusto, a mollitia! Nobis amet numquam magnam sapiente dicta natus similique consectetur ex, voluptate dolore reprehenderit iusto temporibus excepturi autem ab quasi.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci excepturi accusamus aspernatur? Rerum laborum possimus quam et voluptates voluptate accusantium porro eaque ad optio sit odio facere molestias iusto, a mollitia! Nobis amet numquam magnam sapiente dicta natus similique consectetur ex, voluptate dolore reprehenderit iusto temporibus excepturi autem ab quasi.          
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci excepturi accusamus aspernatur? Rerum laborum possimus quam et voluptates voluptate accusantium porro eaque ad optio sit odio facere molestias iusto, a mollitia! Nobis amet numquam magnam sapiente dicta natus similique consectetur ex, voluptate dolore reprehenderit iusto temporibus excepturi autem ab quasi.
       </p>
     </article>
   </section>
@@ -26,7 +26,7 @@
         <div class="features-item__content bgcolor--yellow">
           <h3 class="features-item__title">Computers</h3>
           <p class="features-item__subtitle">Lorem ipsum dolor sit.</p>
-          <a href="" class="far fa-folder-open features-item__button"></a>             
+          <a href="" class="far fa-folder-open features-item__button"></a>
         </div>
         <i class="fas fa-laptop features-item__icon features-item__icon--yellow"></i>
       </li>
@@ -34,7 +34,7 @@
         <div class="features-item__content bgcolor--red">
           <h3 class="features-item__title">Music</h3>
           <p class="features-item__subtitle">Lorem ipsum dolor sit.</p>
-          <a href="" class="far fa-folder-open features-item__button"></a> 
+          <a href="" class="far fa-folder-open features-item__button"></a>
         </div>
         <i class="fas fa-music features-item__icon features-item__icon--red"></i>
       </li>
@@ -42,7 +42,7 @@
         <div class="features-item__content bgcolor--wave">
           <h3 class="features-item__title">Website</h3>
           <p class="features-item__subtitle">Lorem ipsum dolor sit.</p>
-          <a href="" class="far fa-folder-open features-item__button"></a> 
+          <a href="" class="far fa-folder-open features-item__button"></a>
         </div>
         <i class="fas fa-globe-americas features-item__icon features-item__icon--wave"></i>
       </li>
@@ -50,7 +50,7 @@
         <div class="features-item__content bgcolor--green features-item__content--last">
           <h3 class="features-item__title">Android App</h3>
           <p class="features-item__subtitle">Lorem ipsum dolor sit.</p>
-          <a href="" class="far fa-folder-open features-item__button"></a> 
+          <a href="" class="far fa-folder-open features-item__button"></a>
         </div>
         <i class="fab fa-android features-item__icon features-item__icon--green"></i>
       </li>
@@ -58,7 +58,7 @@
         <div class="features-item__content bgcolor--blue features-item__content--last">
           <h3 class="features-item__title">ios App</h3>
           <p class="features-item__subtitle">Lorem ipsum dolor sit.</p>
-          <a href="" class="far fa-folder-open features-item__button"></a>            
+          <a href="" class="far fa-folder-open features-item__button"></a>
         </div>
         <i class="fab fa-apple features-item__icon features-item__icon--blue"></i>
       </li>
@@ -85,7 +85,9 @@
             <p class="subtitle product__subtitle">{{ product.description }}</p>
             <p class="product__price">${{ product.price }}
                 {% if product.old_price %}
-                <span class="product__price-before">{{ product.old_price }}</span>
+                    <div class="product__price product__price--sale"><span class="product__price-before">{{ product.old_price }}</span></div>
+                {% else %}
+                    <div class="product__price"></div>
                 {% endif %}
             </p>
             <button class="button bgcolor--wave product__buy"><i class="fas fa-shopping-cart"></i> +</button>
@@ -164,6 +166,7 @@
           <h3 class="other-advantage-list__title">
             Delivery
             <span>costs</span>
+          </h3>
           <h2 class="other-advantage-list__subtitle"></h2>
         </div>
         <div class="other-advantage-list__content">
@@ -211,7 +214,7 @@
           <p class="other-advantage-list__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam delectus molestiae a unde ipsam nam qui, quidem reiciendis hic blanditiis.</p>
           <a href="" class="other-advantage-list__more fas fa-angle-double-right color--white"></a>
         </div>
-      </li>  
+      </li>
     </ul>
   </div>
   <section class="section other-info">
