@@ -77,7 +77,7 @@
             <div class="product__img"><img src="{{ product.image.url }}" alt=""></div>
             <article class="section product__content">
               <h3 class="section__title product__title">{{ product.name }}</h3>
-              <p class="section__subtitle product__subtitle">{{ products.description }}</p>
+              <p class="section__subtitle product__subtitle">{{ product.description }}</p>
               <p class="product__price">${{ product.price }}
                   {% if product.old_price %}
                   <span class="product__price-before">{{ product.old_price }}</span>
