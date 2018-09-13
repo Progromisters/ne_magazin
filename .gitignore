@@ -109,6 +109,5 @@ ENV/
 .ropeproject
 
 /node_modules 
-gulpfile.js 
 package-lock.json 
 smart-grid-config.js

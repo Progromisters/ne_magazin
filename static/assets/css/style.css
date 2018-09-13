@@ -201,32 +201,18 @@ body {
   font-size: 36px;
 }
 
-.pop-up-sign {
-  position: fixed;
-  top: 0px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  background-size: cover;
-}
-
 .pop-up-sign__content {
-  position: fixed;
+  margin: 0 auto;
   width: 400px;
-  height: 400px;
+  min-height: 300px;
   border: 5px solid #37393e;
   background-color: #ffffff;
 }
 
 .pop-up-sign__head {
-  margin: 0;
   padding: 20px 0;
   background-color: #00a8a9;
   font-size: 32px;
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
   text-align: center;
   color: #ffffff;
 }
@@ -259,16 +245,12 @@ body {
   transform: rotate(90deg);
 }
 
-.pop-up-sign--hidden {
-  visibility: hidden;
-}
-
 .pop-up-sign input[type="text"],
-.pop-up-sign input[type="password"] {
+.pop-up-sign input[type="password"],
+.pop-up-sign input[type="email"] {
   box-sizing: border-box;
   margin: -1px;
   font-size: 16px;
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
   color: rgba(0, 0, 0, 0.5);
   padding-left: 15px;
 }
