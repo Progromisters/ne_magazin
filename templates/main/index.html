@@ -82,13 +82,13 @@
           <article class="product__content">
             <h3 class="title product__title">{{ product.name }}</h3>
             <p class="subtitle product__subtitle">{{ product.description }}</p>
-            <p class="product__price">${{ product.price }}
-                {% if product.old_price %}
-                    <div class="product__price product__price--sale"><span class="product__price-before">{{ product.old_price }}</span></div>
-                {% else %}
-                    <div class="product__price"></div>
-                {% endif %}
-            </p>
+              {% if product.old_price %}
+                <p class="product__price product__price--sale">${{ product.price }}
+                  <span class="product__price-before">{{ product.old_price }}</span>
+                </p>
+              {% else %}
+                <p class="product__price">${{ product.price }}</p>
+              {% endif %}
             <button class="button bgcolor--wave product__buy"><i class="fas fa-shopping-cart"></i> +</button>
             <div class="product__other-buttons">
               <button class="button wishlist"><i class="fas fa-heart"></i> Add to wishlist</button>
