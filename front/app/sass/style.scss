@@ -762,12 +762,15 @@ body{
   padding-bottom: 75px;
   @include row-flex();
   @include wrapper();
+  @include md(padding, 0);
   align-items: stretch;
   &__article{
     @include col();
     @include size(2);
     @include size-md(4);
     @include md(padding, 0);
+    @include md(padding-right, 10px);
+    @include md(padding-left, 10px);
     @include md(margin-top, 30px);
     text-align: start;
     padding-right: 70px;

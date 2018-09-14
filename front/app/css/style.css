@@ -1296,12 +1296,24 @@ body {
     width: calc(100% - 0px);
   }
 
+  .other-info {
+    padding: 0;
+  }
+
   .other-info__article {
     width: calc(100% - 0px);
   }
 
   .other-info__article {
     padding: 0;
+  }
+
+  .other-info__article {
+    padding-right: 10px;
+  }
+
+  .other-info__article {
+    padding-left: 10px;
   }
 
   .other-info__article {
