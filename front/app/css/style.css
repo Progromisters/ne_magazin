@@ -327,8 +327,28 @@ body {
   font-size: 16px;
 }
 
+.button-menu {
+  display: none;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  top: 0;
+  background-color: #37393e;
+  outline: none;
+  z-index: 9999;
+}
+
 .main-nav {
   background-color: #37393e;
+}
+
+.main-nav--small {
+  display: none;
+  position: fixed;
+  top: 50px;
+  width: 100%;
+  background-color: #37393e;
+  z-index: 9999;
 }
 
 .nav-list {
@@ -375,6 +395,10 @@ body {
   margin-left: 3px;
 }
 
+.nav-list--show {
+  display: block !important;
+}
+
 .item-home {
   margin: 10px 0;
 }
@@ -382,6 +406,7 @@ body {
 .item-home a {
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 50px;
   height: 50px;
   background-color: #00a8a9;
@@ -393,13 +418,15 @@ body {
 .item-buttons {
   display: flex;
   align-self: stretch;
+  align-items: center;
 }
 
-.item-buttons > button {
-  margin: 10px 0;
-  height: 100%;
-  display: inline-block;
+.item-buttons > a {
   padding: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
   font-size: 36px;
 }
 
@@ -1153,8 +1180,20 @@ body {
     padding-right: 10px;
   }
 
+  .nav-list__item {
+    padding-top: 25px;
+  }
+
+  .nav-list__item {
+    padding-bottom: 25px;
+  }
+
   .item-home {
     display: none;
+  }
+
+  .item-buttons {
+    padding: 0;
   }
 
   .features {
@@ -1335,13 +1374,93 @@ body {
     margin-right: auto;
   }
 
+  .button-menu {
+    display: block;
+  }
+
   .main-nav {
     display: none;
+  }
+
+  .main-nav--small {
+    display: block;
   }
 
   .nav-list {
     padding-left: 10px;
     padding-right: 10px;
+  }
+
+  .nav-list {
+    flex-direction: column;
+  }
+
+  .nav-list {
+    padding: 0;
+  }
+
+  .nav-list {
+    display: none;
+  }
+
+  .nav-list__item {
+    justify-content: center;
+  }
+
+  .nav-list__item {
+    padding: 0;
+  }
+
+  .nav-list__item > a {
+    padding: 10px 0;
+  }
+
+  .nav-list__item--new::after {
+    right: 40%;
+  }
+
+  .nav-list__item--new::after {
+    top: 0;
+  }
+
+  .item-buttons {
+    flex-direction: column;
+  }
+
+  .item-buttons > a {
+    margin: 0;
+  }
+
+  .dropdown {
+    padding: 10px 0;
+  }
+
+  .dropdown {
+    display: flex;
+  }
+
+  .dropdown {
+    flex-direction: column;
+  }
+
+  .dropdown {
+    width: 100%;
+  }
+
+  .dropdown__menu {
+    display: none;
+  }
+
+  .dropdown__menu {
+    position: static;
+  }
+
+  .dropdown__menu {
+    text-align: center;
+  }
+
+  .dropdown__menu {
+    max-width: 100%;
   }
 
   .features {

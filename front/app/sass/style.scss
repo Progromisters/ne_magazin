@@ -214,20 +214,48 @@ body{
 
 //MAIN NAVIGATION
 
+.button-menu{
+  @include sm(display, block);
+  display: none;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  top: 0;
+  background-color: #37393e;
+  outline: none;
+  z-index: 9999;
+}
+
 .main-nav{
   @include sm(display, none);
   background-color: #37393e;
+  &--small{
+    display: none;
+    position: fixed;
+    top: 50px;
+    width: 100%;
+    @include sm(display, block);
+    background-color: #37393e;
+    z-index: 9999;
+  }
 }
 
 .nav-list{
   @include wrapper();
   @include lg(padding-left, 10px);
   @include lg(padding-right, 10px);
+  @include sm(flex-direction, column);
+  @include sm(padding, 0);
+  @include sm(display, none);
   display: flex;
   list-style: none;
   justify-content: space-between;
   &__item{
     display: flex;
+    @include sm(justify-content, center);
+    @include lg(padding-top, 25px);
+    @include lg(padding-bottom, 25px);
+    @include sm(padding, 0);
     align-self: stretch;
     align-items: center;
     position: relative;
@@ -236,6 +264,7 @@ body{
     color: #ffffff;
     &>a{
       display: flex;
+      @include sm(padding, 10px 0);
       align-self: stretch;
       align-items: center;
       height: 100%;
@@ -243,6 +272,8 @@ body{
       color: #ffffff;
     }
     &--new::after{
+      @include sm(right, 40%);
+      @include sm(top, 0);
       position: absolute;
       top: 20px;
       right: -10px;
@@ -256,6 +287,9 @@ body{
       margin-left: 3px;
     }
   }
+  &--show{
+    display: block !important;
+  }
 }
 
 .item-home{
@@ -264,6 +298,7 @@ body{
   & a{
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 50px;
     height: 50px;
     background-color: #00a8a9;
@@ -274,13 +309,18 @@ body{
 }
 
 .item-buttons{
+  @include sm(flex-direction, column);
+  @include lg(padding, 0);
   display: flex;
   align-self: stretch;
-  &>button{
-    margin: 10px 0;
-    height: 100%;
-    display: inline-block;
+  align-items: center;
+  &>a{
+    @include sm(margin, 0);
     padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
     font-size: 36px;
   }
 }
@@ -288,7 +328,15 @@ body{
 //DROPDOWN MENU
 
 .dropdown{
+  @include sm(padding, 10px 0);
+  @include sm(display, flex);
+  @include sm(flex-direction, column);
+  @include sm(width, 100%);
   &__menu{
+    @include sm(display, none);
+    @include sm(position, static);
+    @include sm(text-align, center);
+    @include sm(max-width, 100%);
     overflow: hidden;
     position: absolute;
     list-style-type: none;
