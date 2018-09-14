@@ -1066,9 +1066,13 @@ body {
   border-radius: 50%;
 }
 
+.pop-up-sign {
+  padding: 20px 0;
+}
+
 .pop-up-sign__content {
   margin: 0 auto;
-  width: 400px;
+  max-width: 400px;
   min-height: 300px;
   border: 5px solid #37393e;
   background-color: #ffffff;
@@ -1113,6 +1117,7 @@ body {
 .pop-up-sign input[type="text"],
 .pop-up-sign input[type="password"],
 .pop-up-sign input[type="email"] {
+  width: 100%;
   box-sizing: border-box;
   margin: -1px;
   font-size: 16px;
@@ -1126,7 +1131,7 @@ body {
 }
 
 .pop-up-sign input {
-  width: 300px;
+  width: 100%;
   height: 50px;
 }
 
@@ -1573,5 +1578,9 @@ body {
 
   .follow-list__item > a {
     height: 40px;
+  }
+
+  .pop-up-sign__form {
+    margin: 10px;
   }
 }
