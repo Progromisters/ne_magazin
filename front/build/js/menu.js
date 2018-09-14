@@ -11,6 +11,7 @@ function showSub() {
       this.children[1].style.height = "auto";
       this.children[1].style.overflow = "visible";
       this.children[1].style.opacity = "1";
+      this.children[1].style.display = "block";
    } else {
       return false;
    }
@@ -25,6 +26,13 @@ function hideSub() {
        return false;
     }
 }
+
+var navList = document.querySelector(".main-nav--small").querySelector(".nav-list");
+
+
+function smallMenu(obj){
+  obj.classList.toggle('nav-list--show');
+};
 
 //PopUps
 var signin = document.querySelector(".sign-in");
