@@ -89,7 +89,11 @@
               {% else %}
                 <p class="product__price">${{ product.price }}</p>
               {% endif %}
-            <button class="button bgcolor--wave product__buy"><i class="fas fa-shopping-cart"></i> +</button>
+            <button type="submit" class="button bgcolor--wave product__buy" id="submit_btn"
+                data-product_id="{{ product.id }}"
+                data-product_name="{{ product.name }}"
+                data-product_price="{{ product.price }}"
+            ><i class="fas fa-shopping-cart"></i> +</button>
             <div class="product__other-buttons">
               <button class="button wishlist"><i class="fas fa-heart"></i> Add to wishlist</button>
               <button class="button compare"><i class="far fa-copy"></i> Add to compare</button>

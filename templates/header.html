@@ -36,10 +36,16 @@
       <li class="nav-list__item"><a href="">Tranding</a></li>
       <li class="nav-list__item nav-list__item--new"><a href="">Offers</a></li>
       <li class="nav-list__item"><a href="">Contact us</a></li>
-      </li>
-      <li class="nav-list__item item-buttons">
-        <a class="button bgcolor--yellow" href=""><i class="fab fa-opencart"></i> Cart 0</a><a class="button bgcolor--wave" href="{% url 'account_login' %}"><i class="far fa-user"></i> Sign in</a>
-      </li>
+        <li class="nav-list__item item-buttons">
+            <div class="basket-container">
+                <a class="button bgcolor--yellow" href=""><i class="fab fa-opencart"></i> Cart 0</a>
+                <div class="basket-items hidden">
+                    <ul class="">
+                    </ul>
+                </div>
+            </div>
+            <a class="button bgcolor--wave" href="{% url 'account_login' %}"><i class="far fa-user"></i> Sign in</a>
+        </li>
     </ul>
   </nav>
   <button class="button button-menu" onclick="smallMenu(navList)"><i class="fas fa-bars"></i></button>
