@@ -431,14 +431,12 @@ body {
 }
 
 .basket-container{
-    position: relative;
-    width: 200px;
-    padding: 15px 10px;
+  position: relative;
 }
 
 .basket-items{
     position: absolute;
-    top: 50px;
+    top: 70px;
     width: 100%;
     background-color: #f0cc50;
     z-index: 10;

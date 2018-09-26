@@ -10,10 +10,11 @@ $(document).ready(function () {
 
     //
     $('.basket-items ul').append(
-            '<li>'
-            +product_name+' $'+product_price+' '+ '<a class="delete-item" href="">x</a>'+
-            '</li>'
+      '<li>'
+      + product_name + ' $' + product_price + ' ' + '<a class="delete-item" href="">x</a>' +
+      '</li>'
     );
+
   });
 
 
