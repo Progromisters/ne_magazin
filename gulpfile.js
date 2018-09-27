@@ -1,10 +1,11 @@
-var gulp        = require('gulp'), 
+const 
+    gulp        = require('gulp'), 
     sass        = require('gulp-sass'), 
-    browserSync = require('browser-sync'); 
-    cssmin      = require('gulp-cssmin');
-    rename      = require('gulp-rename');
-    plumber     = require('gulp-plumber');
-    del         = require('del');
+    // browserSync = require('browser-sync'),
+    cssmin      = require('gulp-cssmin'),
+    rename      = require('gulp-rename'),
+    plumber     = require('gulp-plumber'),
+    // del         = require('del'),
     gcmq        = require('gulp-group-css-media-queries');
  
 gulp.task('sass', function () {
@@ -12,8 +13,8 @@ gulp.task('sass', function () {
         .pipe(plumber())
         .pipe(sass().on('error', sass.logError)) 
         .pipe(gcmq())
-        .pipe(gulp.dest('./static/assets/css')) 
-        // .pipe(browserSync.reload({stream: true})) 
+        .pipe(gulp.dest('./static/assets/css')); 
+    // .pipe(browserSync.reload({stream: true})) 
 });
 
 
