@@ -123,6 +123,12 @@ body{
 //HEADER
 //-------------------------------
 
+.page-header{
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
 .header-upper{
   padding: 40px 0; 
   @include row-flex();
