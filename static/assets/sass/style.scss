@@ -331,6 +331,28 @@ body{
   }
 }
 
+.basket-container{
+  position: relative;
+}
+
+.basket-items{
+
+  position: absolute;
+  top: 70px;
+  padding-top: 20px;
+  width: 100%;
+  background-color: #f0cc50;
+  z-index: 10;
+
+  & li{
+    font-size: 20px;
+    padding: 0 0 20px 10px;
+  }
+  & a{
+    text-decoration: none;
+  }
+}
+
 //DROPDOWN MENU
 
 .dropdown{
