@@ -89,11 +89,14 @@
               {% else %}
                 <p class="product__price">${{ product.price }}</p>
               {% endif %}
-            <button type="submit" class="button bgcolor--wave product__buy submit_btn"
-                 data-product_id="{{ product.id }}"
-                data-product_name="{{ product.name }}"
-                data-product_price="{{ product.price }}"
-            ><i class="fas fa-shopping-cart"></i> +</button>
+              <form id="form_btn" action="{% url 'basket_adding' %}" method="POST">{% csrf_token %}
+                  <button type="button" class="button bgcolor--wave product__buy submit_btn"
+                          data-product_id="{{ product.id }}"
+                          data-product_name="{{ product.name }}"
+                          data-product_price="{{ product.price }}"
+                  ><i class="fas fa-shopping-cart"></i> +
+                  </button>
+              </form>
             <div class="product__other-buttons">
               <button class="button wishlist"><i class="fas fa-heart"></i> Add to wishlist</button>
               <button class="button compare"><i class="far fa-copy"></i> Add to compare</button>
