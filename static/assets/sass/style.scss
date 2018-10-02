@@ -353,6 +353,10 @@ body{
   }
 }
 
+#basket_total{
+  margin-left: 10px;
+}
+
 //DROPDOWN MENU
 
 .dropdown{
@@ -615,6 +619,10 @@ body{
   & i{
     color: #f14d4d;
   }
+}
+
+#form_btn{
+  width: 100%;
 }
 
 //COUNTERS

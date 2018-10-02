@@ -458,6 +458,10 @@ body {
   text-decoration: none;
 }
 
+#basket_total {
+  margin-left: 10px;
+}
+
 .dropdown__menu {
   overflow: hidden;
   position: absolute;
@@ -707,6 +711,10 @@ body {
 .wishlist i,
 .compare i {
   color: #f14d4d;
+}
+
+#form_btn {
+  width: 100%;
 }
 
 .counters {

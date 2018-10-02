@@ -6,51 +6,51 @@ $(document).ready(function () {
         let submit_btn = submit_btns[i];
         submit_btn.onclick = () =>
         {
-//сохранение информации о товаре
+            //сохранение информации о товаре
             let product_id = submit_btn.dataset.product_id;
             let product_name = submit_btn.dataset.product_name;
             let product_price = submit_btn.dataset.product_price;
             console.log(product_id);
             console.log(product_name);
             console.log(product_price);
-//сохранение информации в data для ajax-запроса
+            //сохранение информации в data для ajax-запроса
             let data = {};
             data.product_id = product_id;
             data.product_name = product_name;
             data.product_price = product_price;
             let csrf_token = $('#form_btn [name="csrfmiddlewaretoken"]').val();
-            data["csrfmiddlewaretoken"] = csrf_token;
+            data['csrfmiddlewaretoken'] = csrf_token;
             let url = $('#form_btn').attr('action');
             console.log(url);
             console.log(data);
-//ajax-запрос
+            //ajax-запрос
             $.ajax({
                 url: url,
                 type: 'POST',
                 data: data,
                 cache: true,
                 success: function(data){
-                    console.log("OK");
+                    console.log('OK');
                     console.log(data.products_total);
                     if (data.products_total){
-//отображение количества товаром в корзине
-                        $('#basket_total').text(data.products_total)
+                        //отображение количества товаром в корзине
+                        $('#basket_total').text(data.products_total);
                     }
                 },
                 error: function () {
-                    console.log("ERROR");
+                    console.log('ERROR');
                 }
             });
-//добавление строки товара в корзину
+            //добавление строки товара в корзину
             $('.basket-items ul').append(
                 '<li>'
                 + product_name + ' $' + product_price + ' ' + '<a class="delete-item fas fa-times" href=""></a>' +
                 '</li>'
             );
-        }
+        };
     }
 
-//отображение корзины
+    //отображение корзины
     function showingBasket() {
         $('.basket-items').toggleClass('hidden');
     }
@@ -68,9 +68,9 @@ $(document).ready(function () {
         showingBasket();
     });
 
-//удаление товара
-        $(document).on('click', '.delete-item', function (e) {
-            e.preventDefault();
-            $(this).closest('li').remove();
-        })
+    //удаление товара
+    $(document).on('click', '.delete-item', function (e) {
+        e.preventDefault();
+        $(this).closest('li').remove();
+    });
 });
