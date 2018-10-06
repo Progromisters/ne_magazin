@@ -257,17 +257,14 @@ body{
   list-style: none;
   justify-content: space-between;
   &__item{
-    display: flex;
     @include sm(justify-content, center);
     @include lg(padding-top, 25px);
     @include lg(padding-bottom, 25px);
     @include sm(padding, 0);
-    align-self: stretch;
-    align-items: center;
-    position: relative;
     font-size: 16px;
     font-weight: 500;
     color: #ffffff;
+    flex: 1 auto;
     &>a{
       display: flex;
       @include sm(padding, 10px 0);
@@ -317,10 +314,7 @@ body{
 .item-buttons{
   @include sm(flex-direction, column);
   @include lg(padding, 0);
-  display: flex;
-  align-self: stretch;
-  align-items: center;
-  &>a{
+  &>p, &>a{
     @include sm(margin, 0);
     padding: 0 10px;
     display: flex;
@@ -331,26 +325,11 @@ body{
   }
 }
 
-.basket-container{
-  position: relative;
-}
-
-.basket-items{
-
-  position: absolute;
-  top: 70px;
-  padding-top: 20px;
+.basket__item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
-  background-color: #f0cc50;
-  z-index: 10;
-
-  & li{
-    font-size: 20px;
-    padding: 0 0 20px 10px;
-  }
-  & a{
-    text-decoration: none;
-  }
 }
 
 #basket_total{
@@ -364,18 +343,21 @@ body{
   @include sm(display, flex);
   @include sm(flex-direction, column);
   @include sm(width, 100%);
+  padding: 0;
+  position: relative;
   &__menu{
     @include sm(display, none);
     @include sm(position, static);
     @include sm(text-align, center);
     @include sm(max-width, 100%);
+    display: block;
+    max-height: 10000px;
     overflow: hidden;
+    padding: 0; 
+    list-style: none;
+    width: 100%;
     position: absolute;
-    list-style-type: none;
-    opacity: 0;
-    bottom: -117px;
-    left: -10px;
-    transition: all 0.5s ease-in;
+    transition: max-height 1s ease-in-out;
     background-color: #37393e;
     min-width: 200px;
     z-index: 1;
@@ -384,10 +366,23 @@ body{
       text-decoration: none;
       color: #ffffff;
     }
+    &--hide{
+      // width: 0;
+      max-height: 0;
+      border: 0;
+      transition: max-height 0.3s ease-out;
+    }
   }
   &__item{
-    padding: 10px 0;
-    padding-left: 10px;
+    padding: 10px;
+  }
+  &__btn{
+    text-decoration: none;
+    padding: 1rem;
+    display: block;
+  }
+  &:hover{
+    cursor: pointer;
   }
 }
 
