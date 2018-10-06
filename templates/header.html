@@ -36,7 +36,13 @@
       <li class="nav-list__item nav-list__item--new"><a href="">Offers</a></li>
       <li class="nav-list__item"><a href="">Contact us</a></li>
       <li class="nav-list__item item-buttons dropdown basket-container">
-          <p class="button bgcolor--yellow" href=""><i class="fab fa-opencart"></i> Cart  <span id="basket_total"></span></p>
+          <p class="button bgcolor--yellow" href=""><i class="fab fa-opencart"></i> Cart  <span id="basket_total">
+              {% if products_total_nmb %}
+                  {{ products_total_nmb }}
+              {% else %}
+                  0
+              {% endif %}
+          </span></p>
             <ul class="dropdown__menu basket-items">
             </ul>
       </li>

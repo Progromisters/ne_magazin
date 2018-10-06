@@ -20,7 +20,7 @@ def basket_adding(request):
     session_key = request.session.session_key
     print(request.POST)
     product_id = request.POST.get("product_id")
-      
+
     new_product = ProductInBasket.objects.create(session_key=session_key)
     products_total = ProductInBasket.objects.filter(session_key=session_key, is_active=True).count()
     return_dict["products_total"] = products_total
