@@ -261,6 +261,7 @@ body{
     @include lg(padding-top, 25px);
     @include lg(padding-bottom, 25px);
     @include sm(padding, 0);
+    position: relative;
     font-size: 16px;
     font-weight: 500;
     color: #ffffff;
@@ -279,7 +280,7 @@ body{
       @include sm(top, 0);
       position: absolute;
       top: 20px;
-      right: -10px;
+      right: 30px;
       content: "";
       width: 10px;
       height: 10px;
