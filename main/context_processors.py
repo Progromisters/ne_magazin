@@ -7,6 +7,6 @@ def get_basket_info(request):
         request.session.cycle_key()
 
     products_in_basket = ProductInBasket.objects.filter(session_key=session_key, is_active=True)
-    products_total_nmb = products_in_basket.count()
+    products_total = products_in_basket.count()
 
     return locals()

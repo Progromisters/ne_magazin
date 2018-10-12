@@ -37,13 +37,16 @@
       <li class="nav-list__item"><a href="">Contact us</a></li>
       <li class="nav-list__item item-buttons dropdown basket-container">
           <p class="button bgcolor--yellow" href=""><i class="fab fa-opencart"></i> Cart  <span id="basket_total">
-              {% if products_total_nmb %}
-                  {{ products_total_nmb }}
+              {% if products_total %}
+                  {{ products_total }}
               {% else %}
                   0
               {% endif %}
           </span></p>
             <ul class="dropdown__menu basket-items">
+                {% for product_in_basket in products_in_basket %}
+                    <li class="dropdown__item basket__item">{{ product_in_basket.product.name }} ${{ product_in_basket.product.price }} <a class="devare-item fas fa-times" href=""></a></li>
+                {% endfor %}
             </ul>
       </li>
       <li class="nav-list__item item-buttons">
