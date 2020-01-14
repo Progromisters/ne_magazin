@@ -8,7 +8,7 @@
   <div class="main-slider__img"><img src="{% static 'img/slickimg.png' %}" alt=""></div>
   <div class="main-slider__img"><img src="{% static 'img/slickimg.png' %}" alt=""></div>
   </div>
-<main class="page-main">
+<main class="page-main" id="page">
   <section class="section welcome">
     <article class="section__content welcome__content">
       <h2 class="title section__title">Welcome!</h2>
@@ -92,8 +92,6 @@
               <form id="form_btn" action="{% url 'basket_adding' %}" method="POST">{% csrf_token %}
                   <button type="button" class="button bgcolor--wave product__buy submit_btn"
                           data-product_id="{{ product.id }}"
-                          data-product_name="{{ product.name }}"
-                          data-product_price="{{ product.price }}"
                   ><i class="fas fa-shopping-cart"></i> +
                   </button>
               </form>

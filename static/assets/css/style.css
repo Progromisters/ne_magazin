@@ -239,6 +239,7 @@ body {
 
 .header-upper {
   padding: 40px 0;
+  padding-top: 120px;
   display: flex;
   flex-wrap: wrap;
   margin-left: 0px;
@@ -342,6 +343,18 @@ body {
   background-color: #37393e;
   outline: none;
   z-index: 9999;
+}
+
+#top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+#page {
+  box-sizing: border-box;
 }
 
 .main-nav {
@@ -649,6 +662,16 @@ body {
 }
 
 .product__img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 300px;
+  width: 100%;
+  height: 300px;
+  border: 1px solid #bebebe;
+}
+
+.product__img-checkout {
   display: flex;
   align-items: center;
   justify-content: center;

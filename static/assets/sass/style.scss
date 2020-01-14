@@ -130,7 +130,7 @@ body{
 }
 
 .header-upper{
-  padding: 40px 0; 
+  padding: 40px 0;
   @include row-flex();
   @include wrapper();
   &__logo, &__widget{

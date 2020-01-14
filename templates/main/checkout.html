@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+    {% for product_in_basket in products_in_basket %}
+        <li class="product-list__item product">
+            <div class="product__img"><img src="{{ product_in_basket.product.image.url }}" alt="">
+                <h3 class="title product__title">{{ product_in_basket.product.name }}</h3>
+                <h5 class="product__price">${{ product_in_basket.product.price }}</h5>
+            </div>
+        </li>
+    {% endfor %}
+    
+{% endblock %}
